@@ -1,0 +1,9 @@
+id,name
+shed_pct_tot_cooling,Shed potential as a percent of cooling load
+shed_absolute_gw_cooling,Total cooling shed potential in GW
+shed_pct_tot_heating,Shed potential as a percent of heating load
+shed_absolute_gw_heating,Total heating shed potential in GW
+shift_pct_daily_avg_cooling,Shift potential as a percent of average daily cooling load
+shift_absolute_gwh_cooling,Total cooling shift potential in GWh
+shift_pct_daily_avg_heating,Shift potential as a percent of average daily heating load
+shift_absolute_gwh_heating,Total heating shift potential in GWh
