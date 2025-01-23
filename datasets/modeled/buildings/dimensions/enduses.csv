@@ -1,6 +1,6 @@
 id,name,fuel_id,unit
-Heating (Equip.),Heating,electricity,kWh
-Cooling (Equip.),cooling,electricity,kWh
+Heating,Heating,electricity,kWh
+Cooling,Cooling,electricity,kWh
 Computers and Electronics,Computers and Electronics,electricity,kWh
 Cooking,Cooking,electricity,kWh
 Ventilation,Ventilation,electricity,kWh

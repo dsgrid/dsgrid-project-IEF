@@ -1,19 +1,19 @@
 {
   mappings: [
     {
-      description: "DECARB Buildings sectors to project sectors",
+      description: "Buildings sectors to project sectors",
       dimension_type: "sector",
       file: "dimension_mappings/sector_to_sector.csv",
       mapping_type: "one_to_one",
     },
     {
-      description: "DECARB Buildings BuildStock counties to project counties",
+      description: "Buildings BuildStock counties to project counties",
       dimension_type: "geography",
-      file: "dimension_mappings/counties.csv",
+      file: "dimension_mappings/county_to_county.csv",
       mapping_type: "one_to_one",
     },
     {
-      description: "DECARB Buildings model year to project model year",
+      description: "Buildings model year to project model year",
       dimension_type: "model_year",
       file: "dimension_mappings/model_year_to_model_year.csv",
       mapping_type: "one_to_one",
