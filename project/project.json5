@@ -1,10 +1,10 @@
 {
-  project_id: 'US_DOE_DECARB_2023',
+  project_id: 'US_DOE_IEF_2025',
   description: '',
-  name: 'U.S. DOE DECARB High Resolution Load Projections 2023',
+  name: 'U.S. DOE IEF High Resolution Load Projections 2025',
   datasets: [
     {
-      dataset_id: 'decarb_2023_buildings',
+      dataset_id: 'ief_2025_buildings',
       dataset_type: 'modeled',
       version: '1.0.0',
       required_dimensions: {
@@ -54,7 +54,7 @@
       },
     },
     {
-      dataset_id: 'decarb_2023_industry',
+      dataset_id: 'ief_2025_industry',
       wrap_time_allowed: true,
       dataset_type: 'modeled',
       version: '1.0.0',
@@ -89,7 +89,7 @@
       },
     },
     {
-      dataset_id: 'decarb_2023_transport',
+      dataset_id: 'ief_2025_transport',
       dataset_type: 'modeled',
       version: '1.0.0',
       required_dimensions: {
@@ -165,7 +165,7 @@
       },
     },
     {
-      dataset_id: 'decarb_2023_dgen',
+      dataset_id: 'ief_2025_dgen',
       wrap_time_allowed: true,
       dataset_type: 'modeled',
       version: '1.0.0',
@@ -184,7 +184,7 @@
       },
     },
     {
-      dataset_id: 'decarb_2023_res_and_com_residuals',
+      dataset_id: 'ief_2025_res_and_com_residuals',
       dataset_type: 'modeled',
       version: '1.0.0',
       required_dimensions: {
@@ -205,7 +205,7 @@
       },
     },
     {
-      dataset_id: 'decarb_2023_ind_residuals',
+      dataset_id: 'ief_2025_ind_residuals',
       dataset_type: 'modeled',
       version: '1.0.0',
       required_dimensions: {
@@ -223,7 +223,7 @@
       },
     },
     {
-      dataset_id: 'decarb_2023_datacenters',
+      dataset_id: 'ief_2025_datacenters',
       dataset_type: 'modeled',
       version: '1.0.0',
       required_dimensions: {
@@ -279,43 +279,43 @@
         class: 'Sector',
         name: 'Sectors - Com-Ind-Res-Trans',
         display_name: 'Sector',
-        description: 'DECARB 2023 Demand Sectors; Commercial, Industrial, Residential, and Transportation',
+        description: 'IEF 2025 Demand Sectors; Commercial, Industrial, Residential, and Transportation',
         file: 'dimensions/sectors.csv',
         module: 'dsgrid.dimension.standard',
       },
       {
         type: 'subsector',
         class: 'Subsector',
-        name: 'DECARB 2023 Demand Subsectors',
+        name: 'IEF 2025 Demand Subsectors',
         display_name: 'Subsector',
-        description: 'DECARB 2023 Demand Subsectors; No breakouts for buildings, vehicles by class, 3-digit NAICS for most manufacturing',
+        description: 'IEF 2025 Demand Subsectors; No breakouts for buildings, vehicles by class, 3-digit NAICS for most manufacturing',
         file: 'dimensions/subsectors.csv',
         module: 'dsgrid.dimension.standard',
       },
       {
         type: 'metric',
         class: 'EnergyEndUse',
-        name: 'DECARB 2023 End Uses',
+        name: 'IEF 2025 End Uses',
         display_name: 'End Use',
-        description: 'DECARB 2023 Demand End Uses', // TODO: Describe contents--level of detail, fuel types
+        description: 'IEF 2025 Demand End Uses', // TODO: Describe contents--level of detail, fuel types
         file: 'dimensions/enduses.csv',
         module: 'dsgrid.dimension.standard',
       },
       {
         type: 'model_year',
         class: 'ModelYear',
-        name: 'DECARB 2023 Model Years',
+        name: 'IEF 2025 Model Years',
         display_name: 'Model Year',
-        description: 'DECARB 2023 Model Years; Biennial 2024-2030, then every 5 years to 2050',
+        description: 'IEF 2025 Model Years; Biennial 2024-2030, then every 5 years to 2050',
         file: 'dimensions/model_years.csv',
         module: 'dsgrid.dimension.standard',
       },
       {
         type: 'scenario',
         class: 'Scenario',
-        name: 'DECARB 2023 High-Resolution Demand Scenarios',
+        name: 'IEF 2025 High-Resolution Demand Scenarios',
         display_name: 'Scenario',
-        description: 'DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario',
+        description: 'IEF 2025 High-Resolution Demand Scenarios',
         file: 'dimensions/scenarios.csv',
         module: 'dsgrid.dimension.standard',
       },
