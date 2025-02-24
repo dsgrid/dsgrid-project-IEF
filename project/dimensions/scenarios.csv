@@ -1,5 +1,5 @@
 id,name
-decarb_stated_policies,DECARB Stated Policies
-decarb_high,DECARB High
-decarb_high_inefficient_electrification,DECARB High Inefficient Electrification
-decarb_breakthrough,DECARB Breakthrough
+ief_stated_policies,IEF Stated Policies
+ief_high,IEF High
+ief_high_inefficient_electrification,IEF High Inefficient Electrification
+ief_breakthrough,IEF Breakthrough
