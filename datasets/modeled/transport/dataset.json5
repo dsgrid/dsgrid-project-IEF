@@ -103,8 +103,8 @@
     {
       "class": "Time",
       type: "time",
-      name: "One weekday and one weekend day per week by month",
-      display_name: "Hourly for representative days",
+      name: "One week per month",
+      display_name: "Hourly for representative weeks",
       ranges: [
         {
           start: 1,
@@ -114,8 +114,8 @@
       time_interval_type: "period_ending",
       time_type: "representative_period",
       measurement_type: "total",
-      format: "one_weekday_day_and_one_weekend_day_per_month_by_hour",
-      description: "EVI-X Time - Month (representing seasons), one weekday and one weekend day, and hour of day.",
+      format: "one_week_per_month_by_hour",
+      description: "EVI-X Time - month, day of week, and hour of day.",
     }, 
   ]
 }    
