@@ -121,8 +121,8 @@
           {
             subsector: {
               base: [
-                'bev_light_medium_truck', 'bev_medium_truck',
-                'bev_non_freight_truck', 'bev_heavy_freight_truck',
+                'bev_light-medium_freight_truck', 'bev_medium_freight_truck',
+                'bev_heavy_freight_truck',
                 'bev_bus',
               ],
             },
