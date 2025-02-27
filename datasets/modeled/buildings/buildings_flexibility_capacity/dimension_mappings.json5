@@ -1,0 +1,10 @@
+{
+  mappings: [
+    {
+      description: "DR-Path end uses to dsgrid end uses",
+      dimension_type: "metric",
+      file: "dimension_mappings/enduses_to_enduses_flexibility.csv",
+      mapping_type: "one_to_one",
+    },
+  ],
+}

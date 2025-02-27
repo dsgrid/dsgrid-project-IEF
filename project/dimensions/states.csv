@@ -1,0 +1,12 @@
+id,name,time_zone
+AZ,Arizona,USArizona
+CA,California,PacificPrevailing
+CO,Colorado,MountainPrevailing
+FL,Florida,EasternPrevailing
+GA,Georgia,EasternPrevailing
+MN,Minnesota,CentralPrevailing
+MT,Montana,MountainPrevailing
+NM,New Mexico,MountainPrevailing
+NY,New York,EasternPrevailing
+TX,Texas,CentralPrevailing
+WA,Washington,PacificPrevailing
