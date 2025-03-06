@@ -59,7 +59,7 @@
       time_based_data_adjustment: {
         daylight_saving_adjustment: {
           spring_forward_hour: drop,
-	  fall_back_hour: duplicate,
+	  fall_back_hour: interpolate,
 	},
       },
       dataset_type: 'modeled',
