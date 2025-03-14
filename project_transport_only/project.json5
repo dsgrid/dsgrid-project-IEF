@@ -17,7 +17,7 @@
                     {
                         subsector: {
                             base: [
-                                'Personal_LDV+Compact+BEV_200', 
+                                'Personal_LDV+Compact+BEV_200',
                                 'Personal_LDV+Compact+BEV_300',
                                 'Personal_LDV+Compact+BEV_400',
                                 'Personal_LDV+Midsize+BEV_200',
@@ -85,7 +85,7 @@
                         },
                         metric: {
                             base: [
-                                'electricity_ev_mhdv_depot_ac', 
+                                'electricity_ev_mhdv_depot_ac',
                                 'electricity_ev_mhdv_depot_dc',
                                 'electricity_ev_mhdv_opportunity_dc',
                                 'electricity_ev_mhdv_enroute_dc',
@@ -125,7 +125,7 @@
                         },
                         metric: {
                             base: [
-                                'electricity_ev_mhdv_depot_ac', 
+                                'electricity_ev_mhdv_depot_ac',
                                 'electricity_ev_mhdv_depot_dc',
                                 'electricity_ev_mhdv_opportunity_dc',
                                 'electricity_ev_mhdv_enroute_dc',
@@ -155,8 +155,7 @@
             {
                 type: 'geography',
                 class: 'County',
-                name: 'US Counties 2020 L48',
-                display_name: 'County',
+                name: 'County',
                 description: 'US counties for L48, Census 2020 vintage, no territories',
                 file: '../project/dimensions/counties.csv',
                 module: 'dsgrid.dimension.standard',
@@ -164,8 +163,7 @@
             {
                 type: 'sector',
                 class: 'Sector',
-                name: 'Sectors - Transportation Only',
-                display_name: 'Sector',
+                name: 'Sector',
                 description: 'DECARB 2023 Transportation',
                 file: 'dimensions/sectors.csv',
                 module: 'dsgrid.dimension.standard',
@@ -173,8 +171,7 @@
             {
                 type: 'subsector',
                 class: 'Subsector',
-                name: 'TEMPO EVIX POLARIS Transport Subsectors',
-                display_name: 'Subsector',
+                name: 'Subsector',
                 description: 'TEMPO EVIX POLARIS Transport Subsectors; Vehicle Class, Type, Powertrain, Range (where available)',
                 file: 'dimensions/subsectors.csv',
                 module: 'dsgrid.dimension.standard',
@@ -182,8 +179,7 @@
             {
                 type: 'metric',
                 class: 'EnergyEndUse',
-                name: 'DECARB 2023 Transport End Uses',
-                display_name: 'End Use',
+                name: 'End Use',
                 description: 'DECARB 2023 Transport End Uses; Charging Locations and Levels, plus Transit Rail',
                 file: 'dimensions/enduses.csv',
                 module: 'dsgrid.dimension.standard',
@@ -191,8 +187,7 @@
             {
                 type: 'model_year',
                 class: 'ModelYear',
-                name: 'TEMPO EVIX POLARIS Model Years',
-                display_name: 'Model Year',
+                name: 'Model Year',
                 description: 'TEMPO EVIX POLARIS Model Years; every 5 years 2025 to 2050',
                 file: 'dimensions/model_years.csv',
                 module: 'dsgrid.dimension.standard',
@@ -200,8 +195,7 @@
             {
                 type: 'scenario',
                 class: 'Scenario',
-                name: 'DECARB 2023 High-Resolution Demand Scenarios',
-                display_name: 'Scenario',
+                name: 'Scenario',
                 description: 'DECARB 2023 High-Resolution Demand Scenarios; DECARB High, with two charging behaviors from TEMPO/EVIX/POLARIS modeling: Unmanaged and Overnight slow',
                 file: 'dimensions/scenarios.csv',
                 module: 'dsgrid.dimension.standard',
@@ -210,8 +204,7 @@
                 type: 'time',
                 class: 'Time',
                 frequency: 'P0DT1H0M0.000000S',
-                name: 'Time-2018-EST-hourly-periodBeginning-noLeapDayAdjustment-total',
-                display_name: 'Time EST',
+                name: 'Time EST',
                 time_type: 'datetime',
                 leap_day_adjustment: 'none',
                 description: 'Time dimension, 2018 hourly EST, hour-beginning, no Leap Day Adjustment, total value',
@@ -229,8 +222,7 @@
             {
                 type: 'weather_year',
                 class: 'WeatherYear',
-                name: '2018 Weather Year',
-                display_name: 'Weather 2018',
+                name: 'Weather 2018',
                 description: 'Weather year, 2018 only',
                 file: '../project/dimensions/weather_years.csv',
                 module: 'dsgrid.dimension.standard',
@@ -238,8 +230,7 @@
         ],
         subset_dimensions: [
           {
-            name: 'End Uses by Fuel Type',
-            display_name: 'end_uses_by_fuel_type',
+            name: 'end_uses_by_fuel_type',
             description: 'Provides selection of end uses by fuel type.',
             type: 'metric',
             filename: 'dimensions/subset/end_uses_by_fuel_type.csv',
@@ -260,7 +251,6 @@
                 file: 'dimensions/supplemental/simplified_vehicle_types.csv',
                 module: 'dsgrid.dimension.standard',
                 name: 'Simplified Vehicle Types',
-                display_name: 'Simplified Vehicle Types',
                 mapping: {
                     description: 'Maps Detailed Vehicle Types to Simplified Vehicle Types',
                     file: 'dimension_mappings/lookup_subsector_to_simplified_vehicle_type.csv',
@@ -272,8 +262,7 @@
                 description: 'US States L48',
                 file: '../project/dimensions/supplemental/states.csv',
                 module: 'dsgrid.dimension.standard',
-                name: 'US States L48',
-                display_name: 'State',
+                name: 'State',
                 type: 'geography',
                 mapping: {
                     description: 'Maps US Counties 2020 L48 to State',
@@ -286,7 +275,6 @@
                 type: 'geography',
                 class: 'GeographyDimensionBaseModel',
                 name: 'ReEDS PCA',
-                display_name: 'ReEDS PCA',
                 description: 'ReEDS Power Control Areas',
                 file: '../project/dimensions/supplemental/reeds_pca.csv',
                 module: 'dsgrid.dimension.standard',
@@ -297,13 +285,12 @@
                 },
             },
             {
-                // For regional reporting - Roughly aligned with EPA eGrid, which is 
+                // For regional reporting - Roughly aligned with EPA eGrid, which is
                 // similar to EMM, e.g., compare Figure 6 in https://www.nrel.gov/docs/fy23osti/84916.pdf
                 // to https://www.eia.gov/outlooks/aeo/pdf/nerc_map.pdf
                 type: 'geography',
                 class: 'GeographyDimensionBaseModel',
                 name: 'Cambium GEA',
-                display_name: 'Cambium GEA',
                 description: 'Cambium Generation and Emission Assessment Regions, see https://www.nrel.gov/docs/fy23osti/84916.pdf',
                 file: '../project/dimensions/supplemental/cambium_gea.csv',
                 module: 'dsgrid.dimension.standard',
@@ -319,7 +306,6 @@
                 file: '../project/dimensions/supplemental/emm.csv',
                 module: 'dsgrid.dimension.standard',
                 name: 'EMM Region',
-                display_name: 'EMM Region',
                 type: 'geography',
                 mapping: {
                     description: 'Maps EMM regions to counties',
@@ -331,7 +317,6 @@
                 type: 'geography',
                 class: 'CensusRegion',
                 name: 'Census Region',
-                display_name: 'Census Region',
                 description: 'US Census Regions',
                 file: '../project/dimensions/supplemental/census_regions.csv',
                 module: 'dsgrid.dimension.standard',
@@ -344,8 +329,7 @@
             {
                 type: 'geography',
                 class: 'GeographyDimensionBaseModel',
-                name: 'Contiguous United States',
-                display_name: 'CONUS',
+                name: 'CONUS',
                 description: 'Contiguous United States',
                 file: '../project/dimensions/supplemental/conus.csv',
                 module: 'dsgrid.dimension.standard',

@@ -38,19 +38,17 @@
     data_schema_type: "standard",
   },
   dimensions: [
-    { 
+    {
      "class": "GeographyDimensionBaseModel",
       type: "geography",
-      name: 'US Census tracts',
-      display_name: "Census tracts",
+      name: "Census tracts",
       file: "dimensions/geography.csv",
       module: "dsgrid.dimension.standard",
       description: "US tracts for L48, Census 2010 vintage mapped to 2020 counties, no territories",
     },
     {
       type: "sector",
-      name: "residential and commercial",
-      display_name: "Res and com",
+      name: "Res and com",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       "class": "Sector",
@@ -62,13 +60,11 @@
         file: 'dimensions/subsectors.csv',
         module: 'dsgrid.dimension.standard',
         name: 'tilt azimuth subsectors',
-        display_name: 'tilt azimuth subsectors',
         type: 'subsector',
       },
     {
       type: "metric",
       name: "DPV generation",
-      display_name: "DPV generation",
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       "class": "EnergyEndUse",
@@ -76,8 +72,7 @@
     },
     {
       type: "scenario",
-      name: "Standard Scenarios 2023 Low RE Cost dGen",
-      display_name: "Standard Scenarios 2023 dGen",
+      name: "Standard Scenarios 2023 dGen",
       file: "dimensions/scenario.csv",
       module: "dsgrid.dimension.standard",
       "class": "Scenario",
@@ -86,10 +81,9 @@
     {
       type: "model_year",
       name: "dGen model years",
-      display_name: "dGen model years",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
-      "class": "ModelYear",     
+      "class": "ModelYear",
       description: "dGen model years for Standard Scenarios, 2014-2050 mapped to project model years",
     },
     {
@@ -98,15 +92,13 @@
       file: "dimensions/weather_year.csv",
       module: "dsgrid.dimension.standard",
       name: "2018 weather year",
-      display_name: "2018 weather year",
       type: "weather_year",
     },
     {
       type: 'time',
       class: 'Time',
       frequency: 'P0DT1H0M0.000000S',
-      name: 'Time-2018-UTC-hourly-periodBeginning-noLeapDayAdjustment-total',
-      display_name: 'Time UTC',
+      name: 'Time UTC',
       time_type: 'datetime',
       leap_day_adjustment: 'none',
       description: 'Time dimension, 2018 hourly UTC, hour-beginning, no Leap Day Adjustment, total value',
@@ -121,4 +113,4 @@
             },
         ],
     }, ]
-}    
+}

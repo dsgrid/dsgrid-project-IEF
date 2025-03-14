@@ -38,7 +38,6 @@
     {
       type: "geography",
       name: "State",
-      display_name: "State",
       file: "dimensions/states.csv",
       module: "dsgrid.dimension.standard",
       class: "State",
@@ -47,7 +46,6 @@
     {
       type: "metric",
       name: "Unspecified Electricity",
-      display_name: "Unspecified Electricity",
       file: "../../../datasets/modeled/dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
@@ -56,7 +54,6 @@
     {
       type: "model_year",
       name: "DECARB 2023 Industry Model Years",
-      display_name: "DECARB 2023 Industry Model Years",
       file: "../../../datasets/modeled/industry/dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
@@ -65,8 +62,7 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "DECARB 2023 High-Resolution Demand Scenarios",
-      display_name: "High-Resolution Demand Scenarios",
+      name: "High-Resolution Demand Scenarios",
       description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
@@ -74,7 +70,6 @@
     {
       type: "sector",
       name: "Industrial Sectors",
-      display_name: "Industrial Sectors",
       file: "../../../datasets/modeled/industry/dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
@@ -84,7 +79,6 @@
       type: "subsector",
       class: "Subsector",
       name: "Unspecified Subsectors",
-      display_name: "Unspecified Subsectors",
       description: "",
       file: "../../../datasets/modeled/buildings/dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
@@ -93,8 +87,7 @@
       type: "time",
       class: "Time",
       frequency: "P0DT1H0M0.000000S",
-      name: "Time-2018-EST-hourly",
-      display_name: "Time EST",
+      name: "Time EST",
       time_type: "datetime",
       leap_day_adjustment: "none",
       description: "Time dimension, 2018 hourly EST, period ending, no Leap Day Adjustment, total value",
@@ -112,8 +105,7 @@
     {
       type: "weather_year",
       class: "WeatherYear",
-      name: "2018 Weather Year",
-      display_name: "Weather 2018",
+      name: "Weather 2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",

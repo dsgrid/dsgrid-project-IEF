@@ -6,7 +6,6 @@
       file: '/kfs2/projects/dsgrid/repo_eagle_backup/dsgrid-project-DECARB/project/dimensions/supplemental/all_years.csv',
       module: 'dsgrid.dimension.standard',
       name: 'All years',
-      display_name: 'All years',
       type: 'model_year',
       mapping: {
         description: 'model years interpolated to all years',
