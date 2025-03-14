@@ -37,7 +37,6 @@
     {
       type: "geography",
       name: "State",
-      display_name: "State",
       file: "../../../datasets/historical/eia_861_annual_energy_use_state_sector/dimensions/states.csv",
       module: "dsgrid.dimension.standard",
       class: "State",
@@ -46,7 +45,6 @@
     {
       type: "metric",
       name: "Unspecified Electricity",
-      display_name: "Unspecified Electricity",
       file: "../../../datasets/modeled/dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
@@ -55,7 +53,6 @@
     {
       type: "model_year",
       name: "DECARB 2023 Datacenter Model Years",
-      display_name: "DECARB 2023 Datacenter Model Years",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
@@ -65,7 +62,6 @@
       type: "scenario",
       class: "Scenario",
       name: "DECARB 2023 High-Resolution Demand Scenarios",
-      display_name: "High-Resolution Demand Scenarios",
       description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
@@ -73,7 +69,6 @@
     {
       type: "sector",
       name: "Commercial Sector",
-      display_name: "Commercial Sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
@@ -83,7 +78,6 @@
       type: "subsector",
       class: "Subsector",
       name: "Data center",
-      display_name: "Data center",
       description: "data center subsector",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
@@ -94,8 +88,7 @@
       time_type: 'annual',
       module: 'dsgrid.dimension.standard',
       description: 'Annual time 2023-2050',
-      name: 'annual_time-2023_to_2050',
-      display_name: 'Annual',
+      name: 'Annual',
       ranges: [
         {
           start: '2023',
@@ -105,12 +98,11 @@
       str_format: '%Y',
       include_leap_day: true,
       measurement_type: 'total',
-    },    
+    },
     {
       type: "weather_year",
       class: "WeatherYear",
-      name: "2018 Weather Year",
-      display_name: "Weather 2018",
+      name: "Weather 2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",

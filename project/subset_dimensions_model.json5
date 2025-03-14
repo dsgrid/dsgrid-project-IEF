@@ -1,8 +1,7 @@
 {
   subset_dimensions: [
     {
-      name: 'End Uses by Fuel Type',
-      display_name: 'end_uses_by_fuel_type',
+      name: 'end_uses_by_fuel_type',
       description: 'Provides selection of end uses by fuel type.csv',
       type: 'metric',
       filename: '/kfs2/projects/dsgrid/repo_eagle_backup/dsgrid-project-DECARB/project/dimensions/subset/end_uses_by_fuel_type.csv',
@@ -16,4 +15,3 @@
     },
   ],
 }
-
