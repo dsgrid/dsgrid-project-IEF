@@ -52,7 +52,7 @@
     },
     {
       type: "model_year",
-      name: "DECARB 2023 Datacenter Model Years",
+      name: "Datacenter Model Years",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
@@ -61,7 +61,7 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "DECARB 2023 High-Resolution Demand Scenarios",
+      name: "High-Resolution Demand Scenarios",
       description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",

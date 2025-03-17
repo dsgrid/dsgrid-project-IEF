@@ -56,7 +56,7 @@
     },
     {
       type: "model_year",
-      name: "DECARB 2023 Building Model Years",
+      name: "Building Model Years",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
@@ -65,7 +65,7 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "DECARB 2023 High-Resolution Demand Scenarios",
+      name: "High-Resolution Demand Scenarios",
       description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
@@ -90,7 +90,7 @@
       type: "time",
       class: "Time",
       frequency: "P0DT1H0M0.000000S",
-      name: "Time-2018-EST-hourly",
+      name: "Time EST",
       time_type: "datetime",
       leap_day_adjustment: "none",
       description: "Time dimension, 2018 hourly EST, period ending, no Leap Day Adjustment, total value",

@@ -38,7 +38,7 @@
       description: 'dsgrid Standard Scenarios 2021 Sectors; Commercial, Residential, Industrial and Transportation',
       file: 'dimensions/sectors.csv',
       module: 'dsgrid.dimension.standard',
-      name: 'Sectors - Com-Res-Ind-Trans',
+      name: 'Sector',
       type: 'sector',
     },
     {
@@ -51,7 +51,7 @@
     },
     {
       type: 'metric',
-      name: 'EIA861_customer_sales',
+      name: 'Customer Sales',
       file: 'dimensions/eia861_sales_metric.csv',
       module: 'dsgrid.dimension.standard',
       class: 'EnergyEndUse',
@@ -87,7 +87,7 @@
       time_type: 'annual',
       module: 'dsgrid.dimension.standard',
       description: 'Annual time 2010-2024',
-      name: 'annual_time-2010_to_2024',
+      name: 'Annual',
       ranges: [
         {
           start: '2010',
