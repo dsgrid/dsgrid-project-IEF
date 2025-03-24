@@ -25,7 +25,7 @@
             metric: {
               subset: [
                 {
-                  name: 'End Uses by Sector',
+                  name: 'end_uses_by_sector',
                   selectors: [
                     'commercial_end_uses',
                   ],
@@ -42,7 +42,7 @@
             metric: {
               subset: [
                 {
-                  name: 'End Uses by Sector',
+                  name: 'end_uses_by_sector',
                   selectors: [
                     'residential_end_uses',
                   ],
@@ -74,7 +74,7 @@
           subsector: {
             subset: [
               {
-                name: 'Subsectors by Sector',
+                name: 'subsectors_by_sector',
                 selectors: [
                   'industrial_subsectors',
                 ],
@@ -84,7 +84,7 @@
           metric: {
             subset: [
               {
-                name: 'End Uses by Sector',
+                name: 'end_uses_by_sector',
                 selectors: [
                   'industrial_end_uses',
                 ],
@@ -274,7 +274,7 @@
       {
         type: 'geography',
         class: 'County',
-        name: 'County',
+        name: 'county',
         description: 'US counties for L48, Census 2020 vintage, no territories',
         file: 'dimensions/counties.csv',
         module: 'dsgrid.dimension.standard',
@@ -282,7 +282,7 @@
       {
         type: 'sector',
         class: 'Sector',
-        name: 'Sector',
+        name: 'sector',
         description: 'DECARB 2023 Demand Sectors; Commercial, Industrial, Residential, and Transportation',
         file: 'dimensions/sectors.csv',
         module: 'dsgrid.dimension.standard',
@@ -290,7 +290,7 @@
       {
         type: 'subsector',
         class: 'Subsector',
-        name: 'Subsector',
+        name: 'subsector',
         description: 'DECARB 2023 Demand Subsectors; No breakouts for buildings, vehicles by class, 3-digit NAICS for most manufacturing',
         file: 'dimensions/subsectors.csv',
         module: 'dsgrid.dimension.standard',
@@ -298,7 +298,7 @@
       {
         type: 'metric',
         class: 'EnergyEndUse',
-        name: 'End Use',
+        name: 'end_use',
         description: 'DECARB 2023 Demand End Uses', // TODO: Describe contents--level of detail, fuel types
         file: 'dimensions/enduses.csv',
         module: 'dsgrid.dimension.standard',
@@ -306,7 +306,7 @@
       {
         type: 'model_year',
         class: 'ModelYear',
-        name: 'Model Year',
+        name: 'model_year',
         description: 'DECARB 2023 Model Years; Biennial 2024-2030, then every 5 years to 2050',
         file: 'dimensions/model_years.csv',
         module: 'dsgrid.dimension.standard',
@@ -314,7 +314,7 @@
       {
         type: 'scenario',
         class: 'Scenario',
-        name: 'Scenario',
+        name: 'scenario',
         description: 'DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario',
         file: 'dimensions/scenarios.csv',
         module: 'dsgrid.dimension.standard',
@@ -323,7 +323,7 @@
         type: 'time',
         class: 'Time',
         frequency: 'P0DT1H0M0.000000S',
-        name: 'Time EST',
+        name: 'time_est',
         time_type: 'datetime',
         leap_day_adjustment: 'none',
         description: 'Time dimension, 2018 hourly EST, hour-beginning, no Leap Day Adjustment, total value',
@@ -341,7 +341,7 @@
       {
         type: 'weather_year',
         class: 'WeatherYear',
-        name: 'Weather 2018',
+        name: 'weather_2018',
         description: 'Weather year, 2018 only',
         file: 'dimensions/weather_years.csv',
         module: 'dsgrid.dimension.standard',
@@ -349,7 +349,7 @@
     ],
     subset_dimensions: [
       {
-        name: 'End Uses by Sector',
+        name: 'end_uses_by_sector',
         description: 'Selects end uses by sector, with buildings split into residential and commercial.',
         type: 'metric',
         file: 'dimensions/subset/end_uses_by_sector.csv',
@@ -378,7 +378,7 @@
         ],
       },
       {
-        name: 'Subsectors by Sector',
+        name: 'subsectors_by_sector',
         description: 'Selects subsectors by sector.',
         type: 'subsector',
         file: 'dimensions/subset/subsectors_by_sector.csv',
@@ -409,7 +409,7 @@
         description: 'US States L48',
         file: 'dimensions/supplemental/states.csv',
         module: 'dsgrid.dimension.standard',
-        name: 'State',
+        name: 'state',
         type: 'geography',
         mapping: {
           description: 'Maps US Counties 2020 L48 to State',
@@ -420,7 +420,7 @@
       {
         type: 'geography',
         class: 'GeographyDimensionBaseModel',
-        name: 'ReEDS PCA',
+        name: 'reeds_pca',
         description: 'ReEDS Power Control Areas',
         file: 'dimensions/supplemental/reeds_pca.csv',
         module: 'dsgrid.dimension.standard',
@@ -433,7 +433,7 @@
       {
         type: 'geography',
         class: 'GeographyDimensionBaseModel',
-        name: 'Cambium GEA',
+        name: 'cambium_gea',
         description: 'Cambium Generation and Emission Assessment Regions, see https://www.nrel.gov/docs/fy23osti/84916.pdf',
         file: 'dimensions/supplemental/cambium_gea.csv',
         module: 'dsgrid.dimension.standard',
@@ -448,7 +448,7 @@
         description: 'EMM Region',
         file: 'dimensions/supplemental/emm.csv',
         module: 'dsgrid.dimension.standard',
-        name: 'EMM Region',
+        name: 'emm_region',
         type: 'geography',
         mapping: {
           description: 'Maps EMM regions to counties',
@@ -459,7 +459,7 @@
       {
         type: 'geography',
         class: 'CensusRegion',
-        name: 'Census Region',
+        name: 'census_region',
         description: 'US Census Regions',
         file: 'dimensions/supplemental/census_regions.csv',
         module: 'dsgrid.dimension.standard',
@@ -472,7 +472,7 @@
       {
         type: 'geography',
         class: 'GeographyDimensionBaseModel',
-        name: 'CONUS',
+        name: 'conus',
         description: 'Contiguous United States',
         file: 'dimensions/supplemental/conus.csv',
         module: 'dsgrid.dimension.standard',
