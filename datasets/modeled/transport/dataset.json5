@@ -42,7 +42,7 @@
     {
      "class": "County",
       type: "geography",
-      name: "County",
+      name: "county",
       file: "dimensions/counties.csv",
       module: "dsgrid.dimension.standard",
       description: "US counties, Census 2020 vintage, AK/HI included, no territories.",
@@ -53,7 +53,7 @@
       description: "tempo sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
-      name: "tempo sectors",
+      name: "sector",
 
     },
     {
@@ -62,12 +62,12 @@
       description: "EV charging for specific EV market segments, vehicle classes, and powertrain technologies",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
-      name: "vehicle type",
+      name: "vehicle_type",
 
     },
     {
       type: "metric",
-      name: "Charging types",
+      name: "charging_type",
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       "class": "EnergyEndUse",
@@ -75,7 +75,7 @@
     },
     {
       type: "scenario",
-      name: "DECARB High - EV Charge Management Strategy",
+      name: "decarb_high_ev_charge_management_strategy",
       file: "dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
       "class": "Scenario",
@@ -83,7 +83,7 @@
     },
     {
       type: "model_year",
-      name: "model years",
+      name: "model_year",
       file: "dimensions/years.csv",
       module: "dsgrid.dimension.standard",
       "class": "ModelYear",
@@ -92,7 +92,7 @@
     {
       type: 'weather_year',
       class: 'WeatherYear',
-      name: 'Weather 2018',
+      name: 'weather_year_2018',
       description: 'Weather year, 2018 only',
       file: '../../../project/dimensions/weather_years.csv',
       module: 'dsgrid.dimension.standard',
@@ -100,7 +100,7 @@
     {
       "class": "Time",
       type: "time",
-      name: "Hourly for representative days",
+      name: "hourly_for_representative_days",
       ranges: [
         {
           start: 1,

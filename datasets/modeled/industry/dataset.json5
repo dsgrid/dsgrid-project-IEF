@@ -34,7 +34,7 @@
   dimensions: [
     {
       type: "geography",
-      name: "State",
+      name: "state",
       file: "dimensions/states.csv",
       module: "dsgrid.dimension.standard",
       class: "State",
@@ -42,7 +42,7 @@
     },
     {
       type: "metric",
-      name: "Industry End Uses",
+      name: "industry_end_use",
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
@@ -51,7 +51,7 @@
     {
       type: 'model_year',
       class: 'ModelYear',
-      name: 'Model Year',
+      name: 'model_year',
       description: 'DECARB 2023 Model Years; Biennial 2024-2030, then every 5 years to 2050',
       file: "../../../project/dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
@@ -59,14 +59,14 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "DECARB GCAM Scenarios",
+      name: "IEF_gcam_scenario",
       description: "DECARB Year 1 Task 4 GCAM Scenarios",
       file: "dimensions/gcam_scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
     {
       type: "sector",
-      name: "Industrial Sector",
+      name: "sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
@@ -75,7 +75,7 @@
     {
       type: "subsector",
       class: "Subsector",
-      name: "Industrial Subsectors",
+      name: "subsector",
       description: "Select subsectors modeled in other DECARB tasks and/or with meaningful decarbonization potential.",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
@@ -84,7 +84,7 @@
       type: "time",
       class: "Time",
       time_type: "index",
-      name: "IndTime",
+      name: "ind_time",
       description: "Industrial 8760-indexed time with 2018-01-01 00:00:00 start, stitched from representative diurnal profiles in local clock time. The data are laid out like standard time and have days of the week aligned with what's expected for weather year 2018, but both the data and timestamps need daylight saving adjustment to local prevailing time.",
       time_interval_type: "period_beginning",
       str_format: "%Y-%m-%d %H:%M:%S",
@@ -101,7 +101,7 @@
     {
       type: "weather_year",
       class: "WeatherYear",
-      name: "Weather 2018",
+      name: "weather_year_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",

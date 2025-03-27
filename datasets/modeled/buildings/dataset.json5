@@ -40,7 +40,7 @@
   dimensions: [
     {
       type: "geography",
-      name: "EMM Region",
+      name: "emm_region",
       file: "dimensions/regions.csv",
       module: "dsgrid.dimension.standard",
       class: "GeographyDimensionBaseModel",
@@ -48,7 +48,7 @@
     },
     {
       type: "metric",
-      name: "Building End Uses",
+      name: "building_end_use",
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
@@ -56,7 +56,7 @@
     },
     {
       type: "model_year",
-      name: "Building Model Years",
+      name: "building_model_year",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
@@ -65,14 +65,14 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "High-Resolution Demand Scenarios",
+      name: "high_resolution_demand_scenario",
       description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
     {
       type: "sector",
-      name: "Building Sectors",
+      name: "sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
@@ -81,7 +81,7 @@
     {
       type: "subsector",
       class: "Subsector",
-      name: "Unspecified Subsectors",
+      name: "unspecified_subsector",
       description: "",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
@@ -90,7 +90,7 @@
       type: "time",
       class: "Time",
       frequency: "P0DT1H0M0.000000S",
-      name: "Time EST",
+      name: "time_est",
       time_type: "datetime",
       leap_day_adjustment: "none",
       description: "Time dimension, 2018 hourly EST, period ending, no Leap Day Adjustment, total value",
@@ -108,7 +108,7 @@
     {
       type: "weather_year",
       class: "WeatherYear",
-      name: "2018 Weather Year",
+      name: "weather_year_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",

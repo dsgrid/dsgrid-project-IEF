@@ -36,7 +36,7 @@
   dimensions: [
     {
       type: "geography",
-      name: "State",
+      name: "state",
       file: "../../../datasets/historical/eia_861_annual_energy_use_state_sector/dimensions/states.csv",
       module: "dsgrid.dimension.standard",
       class: "State",
@@ -44,7 +44,7 @@
     },
     {
       type: "metric",
-      name: "Unspecified Electricity",
+      name: "unspecified_electricity",
       file: "../../../datasets/modeled/dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
@@ -52,7 +52,7 @@
     },
     {
       type: "model_year",
-      name: "Datacenter Model Years",
+      name: "model_year",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
@@ -61,14 +61,14 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "High-Resolution Demand Scenarios",
+      name: "high_resolution_demand_scenario",
       description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
     {
       type: "sector",
-      name: "Commercial Sector",
+      name: "sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
@@ -77,7 +77,7 @@
     {
       type: "subsector",
       class: "Subsector",
-      name: "Data center",
+      name: "datacenter",
       description: "data center subsector",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
@@ -88,7 +88,7 @@
       time_type: 'annual',
       module: 'dsgrid.dimension.standard',
       description: 'Annual time 2023-2050',
-      name: 'Annual',
+      name: 'annual',
       ranges: [
         {
           start: '2023',
@@ -102,7 +102,7 @@
     {
       type: "weather_year",
       class: "WeatherYear",
-      name: "Weather 2018",
+      name: "weather_year_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",
