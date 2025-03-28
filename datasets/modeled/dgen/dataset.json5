@@ -60,7 +60,7 @@
         file: 'dimensions/subsectors.csv',
         module: 'dsgrid.dimension.standard',
         name: 'tilt_azimuth_subsector',
-        type: 'subsector',
+        type: 'tilt_azimuth',
       },
     {
       type: "metric",
@@ -72,11 +72,11 @@
     },
     {
       type: "scenario",
-      name: "standard_scenarios_2023_dgen",
+      name: "dgen_stscen2022_low_re_cost",
       file: "dimensions/scenario.csv",
       module: "dsgrid.dimension.standard",
       "class": "Scenario",
-      description: "Reeds scenario High and Breakthrough mapped to dGen scenario StScen2022_Low_RE_Cost",
+      description: "ReEDS scenario High and Breakthrough mapped to dGen scenario StScen2022_Low_RE_Cost",
     },
     {
       type: "model_year",
@@ -91,7 +91,7 @@
       description: "Weather year, 2018 only",
       file: "dimensions/weather_year.csv",
       module: "dsgrid.dimension.standard",
-      name: "weather_year_2018",
+      name: "weather_2018",
       type: "weather_year",
     },
     {

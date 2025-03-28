@@ -75,7 +75,7 @@
     },
     {
       type: "scenario",
-      name: "decarb_high_ev_charge_management_strategy",
+      name: "ev_scenario",
       file: "dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
       "class": "Scenario",
@@ -92,7 +92,7 @@
     {
       type: 'weather_year',
       class: 'WeatherYear',
-      name: 'weather_year_2018',
+      name: 'weather_2018',
       description: 'Weather year, 2018 only',
       file: '../../../project/dimensions/weather_years.csv',
       module: 'dsgrid.dimension.standard',

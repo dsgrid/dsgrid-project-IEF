@@ -59,7 +59,7 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "IEF_gcam_scenario",
+      name: "gcam_scenario",
       description: "DECARB Year 1 Task 4 GCAM Scenarios",
       file: "dimensions/gcam_scenarios.csv",
       module: "dsgrid.dimension.standard",
@@ -101,7 +101,7 @@
     {
       type: "weather_year",
       class: "WeatherYear",
-      name: "weather_year_2018",
+      name: "weather_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",

@@ -61,7 +61,7 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "high_resolution_demand_scenario",
+      name: "high_scenario",
       description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
@@ -102,7 +102,7 @@
     {
       type: "weather_year",
       class: "WeatherYear",
-      name: "weather_year_2018",
+      name: "weather_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",

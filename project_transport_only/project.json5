@@ -171,7 +171,7 @@
             {
                 type: 'subsector',
                 class: 'subsector',
-                name: 'Subsector',
+                name: 'subsector',
                 description: 'TEMPO EVIX POLARIS Transport Subsectors; Vehicle Class, Type, Powertrain, Range (where available)',
                 file: 'dimensions/subsectors.csv',
                 module: 'dsgrid.dimension.standard',
@@ -246,18 +246,18 @@
         supplemental_dimensions: [
             {
                 type: 'subsector',
-        class: 'Subsector',
+                class: 'Subsector',
                 description: 'Simplified Vehicle Types',
                 file: 'dimensions/supplemental/simplified_vehicle_types.csv',
                 module: 'dsgrid.dimension.standard',
-                name: 'simplified_vehicle_types',
+                name: 'simple_vehicle_type',
                 mapping: {
                     description: 'Maps Detailed Vehicle Types to Simplified Vehicle Types',
                     file: 'dimension_mappings/lookup_subsector_to_simplified_vehicle_type.csv',
                     mapping_type: 'many_to_one_aggregation',
-        },
+                },
             },
-      {
+            {
                 class: 'State',
                 description: 'US States L48',
                 file: '../project/dimensions/supplemental/states.csv',

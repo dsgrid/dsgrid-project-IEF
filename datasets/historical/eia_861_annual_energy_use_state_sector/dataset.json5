@@ -75,7 +75,7 @@
     },
     {
       type: 'model_year',
-      name: 'model_years_2010_to_2024',
+      name: 'model_year_2010_to_2024',
       file: 'dimensions/model_years.csv',
       module: 'dsgrid.dimension.standard',
       class: 'ModelYear',
