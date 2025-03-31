@@ -1,9 +1,9 @@
 {
-  dataset_id: "decarb_2023_transport",
+  dataset_id: "ief_2023_transport",
   dataset_type: "modeled",
   data_source: "tempo evix polaris",
   sector_description: "electric load associated with light, medium, and heavy-duty road transportation",
-  description: "DECARB Task 6 results from TEMPO, EVI-X, and POLARIS (Nov 2023) with profiles using 2018 as the weather year",
+  description: "IEF Task 6 results from TEMPO, EVI-X, and POLARIS (Nov 2023) with profiles using 2018 as the weather year",
   origin_creator: "Arthur Yip",
   origin_organization: "NREL",
   origin_contributors: [
@@ -14,17 +14,17 @@
     "Paige Jadun",
     "Matteo Muratori"
   ],
-  origin_project: "DECARB Year 1, Task 6",
+  origin_project: "IEF Year 1, Task 6",
   origin_date: "2023-11-30",
   origin_version: "1",
-  source: "TEMPO, EVI-X, and POLARIS simulations for DECARB 6",
+  source: "TEMPO, EVI-X, and POLARIS simulations for IEF 6",
   data_classification: "low",
   tags: [
     "TEMPO",
     "EVIX",
     "POLARIS",
     "EV",
-    "decarb",
+    "ief",
     "electric vehicle"
   ],
   trivial_dimensions: [
@@ -79,7 +79,7 @@
       file: "dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
       "class": "Scenario",
-      description: "DECARB High + EV Charge Management Strategy",
+      description: "IEF High + EV Charge Management Strategy",
     },
     {
       type: "model_year",

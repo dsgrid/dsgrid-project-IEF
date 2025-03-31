@@ -1,5 +1,5 @@
 {
-  dataset_id: "decarb_2023_dgen",
+  dataset_id: "ief_2023_dgen",
   dataset_type: "modeled",
   data_source: "dgen",
   sector_description: "residential and commercial",
@@ -23,7 +23,7 @@
     "residential and commercial PV generation",
     "dGen",
     "Standard Scenarios 2023",
-    "decarb",
+    "ief",
   ],
   trivial_dimensions: [
     "weather_year",

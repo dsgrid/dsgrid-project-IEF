@@ -1,8 +1,8 @@
 {
-  dataset_id: "decarb_2023_datacenters",
+  dataset_id: "ief_2023_datacenters",
   dataset_type: "modeled",
   sector_description: "Commercial",
-  description: "Data center load for the DECARB 2023 High Scenario, with the projection based in part on EPRI (2024), 'Analyzing Artificial Intelligence and Data Center Energy Consumption'",
+  description: "Data center load for the IEF 2023 High Scenario, with the projection based in part on EPRI (2024), 'Analyzing Artificial Intelligence and Data Center Energy Consumption'",
   origin_creator: "Ashreeta Prasanna",
   origin_organization: "NREL",
   origin_contributors: [
@@ -10,11 +10,11 @@
     "Elaine Hale",
     "Sarah Smith"
   ],
-  origin_project: "DECARB Year 1, Task 6",
+  origin_project: "IEF Year 1, Task 6",
   origin_date: "2024-07-08",
   origin_version: "v0.1.0",
   data_source: "EPRI, LBL",
-  source: "Datacenter load for DECARB 2023",
+  source: "Datacenter load for IEF 2023",
   data_classification: "low",
   tags: [
     "datacenters",
@@ -62,7 +62,7 @@
       type: "scenario",
       class: "Scenario",
       name: "high_scenario",
-      description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
+      description: "IEF 2023 High-Resolution Demand Scenarios; Limited to a single, high scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
