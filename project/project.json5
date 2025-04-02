@@ -401,7 +401,7 @@
             description: 'Industrial Subsectors',
           },
         ],
-      }
+      },
       {
         name: 'end_uses_by_fuel_type',
         description: 'Provides selection of end uses by fuel type.csv',
@@ -412,9 +412,9 @@
           {
             name: 'electricity_end_uses',
             description: 'All Electric End Uses',
-            column_values: { fuel_id: 'electricity', unit: 'MWh' 
+            column_values: { fuel_id: 'electricity', unit: 'MWh' },
           },
-      },
+        },
       ],
     },
     ],
