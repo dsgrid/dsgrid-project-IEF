@@ -1,8 +1,8 @@
 {
-  dataset_id: "decarb_2023_buildings",
+  dataset_id: "ief_2023_buildings",
   dataset_type: "modeled",
   sector_description: "residential_and_commercial_building_stock",
-  description: "High-resolution building end-use electricity load profiles for contiguous US for DECARB High Scenario, simulated using Scout with end use load profile data from ResStock and ComStock.",
+  description: "High-resolution building end-use electricity load profiles for contiguous US for IEF High Scenario, simulated using Scout with end use load profile data from ResStock and ComStock.",
   origin_creator: "Aven Satre Meloy",
   origin_organization: "LBL",
   origin_contributors: [
@@ -66,7 +66,7 @@
       type: "scenario",
       class: "Scenario",
       name: "high_scenario",
-      description: "DECARB 2023 High-Resolution Demand Scenarios; Limited to a single, high decarbonization scenario",
+      description: "IEF 2023 High-Resolution Demand Scenarios; Limited to a single, high scenario",
       file: "../../../project/dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
     },

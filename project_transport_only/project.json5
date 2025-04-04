@@ -1,10 +1,10 @@
 {
-    project_id: 'US_DOE_DECARB_transport_2023',
-    description: 'Transport sector results from U.S. DOE DECARB Task 1.6',
-    name: 'U.S. DOE DECARB-transport High Resolution Load Projections 2023',
+    project_id: 'US_DOE_IEF_transport_2023',
+    description: 'Transport sector results from U.S. DOE IEF Task 1.6',
+    name: 'U.S. DOE IEF-transport High Resolution Load Projections 2023',
     datasets: [
         {
-            dataset_id: 'decarb_2023_transport',
+            dataset_id: 'ief_2023_transport',
             dataset_type: 'modeled',
             version: '1.0.0',
             required_dimensions: {
@@ -164,7 +164,7 @@
                 type: 'sector',
                 class: 'Sector',
                 name: 'sector',
-                description: 'DECARB 2023 Transportation',
+                description: 'IEF 2023 Transportation',
                 file: 'dimensions/sectors.csv',
                 module: 'dsgrid.dimension.standard',
             },
@@ -180,7 +180,7 @@
                 type: 'metric',
                 class: 'EnergyEndUse',
                 name: 'end_use',
-                description: 'DECARB 2023 Transport End Uses; Charging Locations and Levels, plus Transit Rail',
+                description: 'IEF 2023 Transport End Uses; Charging Locations and Levels, plus Transit Rail',
                 file: 'dimensions/enduses.csv',
                 module: 'dsgrid.dimension.standard',
             },
@@ -196,7 +196,7 @@
                 type: 'scenario',
                 class: 'Scenario',
                 name: 'scenario',
-                description: 'DECARB 2023 High-Resolution Demand Scenarios; DECARB High, with two charging behaviors from TEMPO/EVIX/POLARIS modeling: Unmanaged and Overnight slow',
+                description: 'IEF 2023 High-Resolution Demand Scenarios; IEF High, with two charging behaviors from TEMPO/EVIX/POLARIS modeling: Unmanaged and Overnight slow',
                 file: 'dimensions/scenarios.csv',
                 module: 'dsgrid.dimension.standard',
             },

@@ -1,19 +1,19 @@
 {
   mappings: [
     {
-      description: "GCAM scenarios to DECARB scenarios",
+      description: "GCAM scenarios to IEF scenarios",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "one_to_one",
     },
     {
-      description: "Industrial dataset end uses to DECARB industrial end uses",
+      description: "Industrial dataset end uses to IEF industrial end uses",
       dimension_type: "metric",
       file: "dimension_mappings/enduses_to_enduses_industrial.csv",
       mapping_type: "one_to_one",
     },
     {
-      description: "CONUS states (including D.C.) to CONUS county for DECARB industrial dataset",
+      description: "CONUS states (including D.C.) to CONUS county for IEF industrial dataset",
       dimension_type: "geography",
       file: "dimension_mappings/state_to_county_industrial.csv",
       mapping_type: "one_to_many_disaggregation",
