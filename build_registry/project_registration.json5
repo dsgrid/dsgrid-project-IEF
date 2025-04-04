@@ -1,0 +1,121 @@
+// Add the dataset and repository paths at runtime. For example:
+// $ dsgrid registry bulk-register \
+//    --base-repo-dir ~/repos/dsgrid-project-IEF \
+//    --base-data-dir /projects/dsgrid/data-DECARB \
+//    project_registration.json5
+
+{
+  projects: [
+    {
+      project_id: "US_DOE_IEF_2023",
+      config_file: "project/project.json5",
+    },
+  ],
+  datasets: [
+    {
+      dataset_id: "eia_861_annual_energy_use_state_sector",
+      dataset_path: "eia861_load_data",
+      config_file: "datasets/historical/eia_861_annual_energy_use_state_sector/dataset.json5",
+      replace_dimension_names_with_ids: false,
+    },
+    {
+      dataset_id: "ief_2023_buildings",
+      dataset_path: "buildings",
+      config_file: "datasets/modeled/buildings/dataset.json5",
+      replace_dimension_names_with_ids: false,
+    },
+    {
+      dataset_id: "ief_2023_transport",
+      dataset_path: "transportation",
+      config_file: "datasets/modeled/transport/dataset.json5",
+      replace_dimension_names_with_ids: false,
+    },
+    {
+      dataset_id: "ief_2023_dgen",
+      dataset_path: "dGen_data",
+      config_file: "datasets/modeled/dgen/dataset.json5",
+      replace_dimension_names_with_ids: false,
+    },
+    {
+      dataset_id: "ief_2023_industry",
+      dataset_path: "industrial_formatted",
+      config_file: "datasets/modeled/industry/dataset.json5",
+      replace_dimension_names_with_ids: false,
+    },
+    {
+      dataset_id: "ief_2023_datacenters",
+      dataset_path: "datacenters",
+      config_file: "datasets/modeled/datacenters/dataset.json5",
+      replace_dimension_names_with_ids: false,
+    },
+    // These are derived datasets.
+    //{
+    //  dataset_id: "ief_2023_res_and_com_residuals",
+    //  dataset_path: "res_com_residuals",
+    //  config_file: "datasets/modeled/res_com_residuals/dataset.json5",
+    //  replace_dimension_names_with_ids: true,
+    //},
+    //{
+    //  dataset_id: "ief_2023_ind_residuals",
+    //  dataset_path: "ind_residuals",
+    //  config_file: "datasets/modeled/ind_residuals/dataset.json5",
+    //  replace_dimension_names_with_ids: true,
+    //},
+  ],
+  dataset_submissions: [
+    {
+      project_id: "US_DOE_IEF_2023",
+      dataset_id: "eia_861_annual_energy_use_state_sector",
+      dimension_mapping_file: "datasets/historical/eia_861_annual_energy_use_state_sector/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+    },
+    {
+      project_id: "US_DOE_IEF_2023",
+      dataset_id: "ief_2023_buildings",
+      dimension_mapping_file: "datasets/modeled/buildings/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+      autogen_reverse_supplemental_mappings: [
+        "geography",
+      ],
+    },
+    {
+      project_id: "US_DOE_IEF_2023",
+      dataset_id: "ief_2023_transport",
+      dimension_mapping_file: "datasets/modeled/transport/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+      autogen_reverse_supplemental_mappings: [
+        "geography",
+      ],
+    },
+    {
+      project_id: "US_DOE_IEF_2023",
+      dataset_id: "ief_2023_dgen",
+      dimension_mapping_file: "datasets/modeled/dgen/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+    },
+    {
+      project_id: "US_DOE_IEF_2023",
+      dataset_id: "ief_2023_industry",
+      dimension_mapping_file: "datasets/modeled/industry/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+    },
+    {
+      project_id: "US_DOE_IEF_2023",
+      dataset_id: "ief_2023_datacenters",
+      dimension_mapping_file: "datasets/modeled/datacenters/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+    },
+    {
+      project_id: "US_DOE_IEF_2023",
+      dataset_id: "ief_2023_res_and_com_residuals",
+      dimension_mapping_file: "datasets/modeled/res_com_residuals/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+    },
+    {
+      project_id: "US_DOE_IEF_2023",
+      dataset_id: "ief_2023_ind_residuals",
+      dimension_mapping_file: "datasets/modeled/ind_residuals/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+    },
+  ],
+}
