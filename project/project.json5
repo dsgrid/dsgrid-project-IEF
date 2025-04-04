@@ -57,10 +57,10 @@
       dataset_id: 'ief_2023_industry',
       wrap_time_allowed: true,
       time_based_data_adjustment: {
-        daylight_saving_adjustment: {
+          daylight_saving_adjustment: {
           spring_forward_hour: "drop",
-    	    fall_back_hour: "duplicate",
-    	  },
+          fall_back_hour: "duplicate",
+        },
       },
       dataset_type: 'modeled',
       version: '1.0.0',
@@ -414,9 +414,8 @@
             description: 'All Electric End Uses',
             column_values: { fuel_id: 'electricity', unit: 'MWh' },
           },
-        },
-      ],
-    },
+        ],
+      },
     ],
     supplemental_dimensions: [
       {

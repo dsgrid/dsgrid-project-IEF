@@ -9,7 +9,7 @@ CLI COMMANDS:
 dsgrid config create -u http://localhost:8529 -N test-dsgrid --offline
 
 # register the project
-dsgrid registry projects register "dsgrid-project-DECARB/project/project.json5" --log-message "test"
+dsgrid registry projects register "dsgrid-project-IEF/project/project.json5" --log-message "test"
 """
 
 import os
