@@ -60,7 +60,7 @@
         file: 'dimensions/subsectors.csv',
         module: 'dsgrid.dimension.standard',
         name: 'tilt_azimuth_subsector',
-        type: 'tilt_azimuth',
+        type: 'subsector',
       },
     {
       type: "metric",
