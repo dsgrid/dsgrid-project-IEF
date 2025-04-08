@@ -13,7 +13,7 @@
       mapping_type: "many_to_one_aggregation",
     },
     {
-      description: "dGen scenario to DECARB scenario",
+      description: "dGen scenario to IEF scenario",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "one_to_one",
