@@ -137,7 +137,7 @@ write_csv(subsector, "c:/users/ayip/documents/github/dsgrid-project-DECARB/datas
 list_of_to_id =
   c("bev_compact","bev_midsize","bev_pickup","bev_suv",
     "phev_compact","phev_midsize","phev_pickup","phev_suv",
-    "bev_light_medium_truck","bev_medium_truck","bev_non_freight_truck","bev_heavy_truck",
+    "bev_light_medium_truck","bev_medium_truck","bev_non_freight_truck","bev_heavy_freight_truck",
     "bev_bus","rail_transit")
 
 subsector_to_subsector <- subsector %>% rename(from_id = id) %>% select(-name) %>%

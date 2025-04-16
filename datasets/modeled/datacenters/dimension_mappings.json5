@@ -7,7 +7,7 @@
       mapping_type: "many_to_many_disaggregation",
     },
     {
-      description: "DECARB Datacenters model year to project model year",
+      description: "Datacenters model year to project model year",
       dimension_type: "model_year",
       file: "dimension_mappings/model_year_to_model_year.csv",
       mapping_type: "many_to_many_explicit_multipliers",

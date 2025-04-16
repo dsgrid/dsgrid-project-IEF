@@ -7,7 +7,11 @@
       mapping_type: "one_to_one",
     },
     {
+<<<<<<< HEAD
       description: "Buildings BuildStock counties to project counties",
+=======
+      description: "Buildings EMM to project counties",
+>>>>>>> origin/main
       dimension_type: "geography",
       file: "dimension_mappings/county_to_county.csv",
       mapping_type: "one_to_one",

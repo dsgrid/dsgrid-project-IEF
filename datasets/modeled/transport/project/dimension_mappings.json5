@@ -1,7 +1,7 @@
 {
   mappings: [
       {
-      description: "scenarios with variations on EV charging behavior to DECARB High default (immediate unmanaged)",
+      description: "scenarios with variations on EV charging behavior to IEF High default (immediate unmanaged)",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "one_to_one",
@@ -19,7 +19,7 @@
       mapping_type: "one_to_one",
     },
     {
-      description: "TEMPO EVIX POLARIS model year to project model year, with fractions based on DECARB 2",
+      description: "TEMPO EVIX POLARIS model year to project model year, with fractions based on IEF 2",
       dimension_type: "model_year",
       file: "dimension_mappings/model_year_to_model_year.csv",
       mapping_type: "many_to_many_explicit_multipliers",

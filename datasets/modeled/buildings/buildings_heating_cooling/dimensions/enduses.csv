@@ -1,0 +1,3 @@
+id,name,fuel_id,unit
+heating,Heating,electricity,kWh
+cooling,Cooling,electricity,kWh

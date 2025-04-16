@@ -1,7 +1,7 @@
 {
   mappings: [
     {
-      description: "CONUS states (including D.C.) to CONUS county for DECARB industrial dataset",
+      description: "CONUS states (including D.C.) to CONUS county for IEF industrial dataset",
       dimension_type: "geography",
       file: "../../../datasets/modeled/industry/dimension_mappings/state_to_county_industrial.csv",
       mapping_type: "one_to_many_disaggregation",
