@@ -1,10 +1,10 @@
 id,name,fuel_id,unit
-Heating,Heating,electricity,kWh
-Cooling,Cooling,electricity,kWh
-Computers and Electronics,Computers and Electronics,electricity,kWh
-Cooking,Cooking,electricity,kWh
-Ventilation,Ventilation,electricity,kWh
-Lighting,Lighting,electricity,kWh
-Other,Other,electricity,kWh
-Refrigeration,Refrigeration,electricity,kWh
-Water Heating,Water Heating,electricity,kWh
+heating,Heating,electricity,kWh
+cooling,Cooling,electricity,kWh
+computers_electronics,Computers and Electronics,electricity,kWh
+cooking,Cooking,electricity,kWh
+ventilation,Ventilation,electricity,kWh
+lighting,Lighting,electricity,kWh
+other,Other,electricity,kWh
+refrigeration,Refrigeration,electricity,kWh
+water_heating,Water Heating,electricity,kWh

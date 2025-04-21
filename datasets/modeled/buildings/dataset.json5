@@ -1,17 +1,9 @@
 {
-<<<<<<< HEAD
-  dataset_id: "demand_2025_buildings",
+  dataset_id: "ief_2023_buildings",
   dataset_type: "modeled",
   sector_description: "residential_and_commercial_building_stock",
   description: "High-resolution building end-use electricity load profiles for contiguous US for four scenarios, simulated using Scout with end use load profile data from ResStock and ComStock.",
   origin_creator: "Margaret Pigman",
-=======
-  dataset_id: "ief_2023_buildings",
-  dataset_type: "modeled",
-  sector_description: "residential_and_commercial_building_stock",
-  description: "High-resolution building end-use electricity load profiles for contiguous US for IEF High Scenario, simulated using Scout with end use load profile data from ResStock and ComStock.",
-  origin_creator: "Aven Satre Meloy",
->>>>>>> origin/main
   origin_organization: "LBL",
   origin_contributors: [
     "Jared Langevin",
@@ -19,10 +11,6 @@
     "Chioke Harris",
     "Henry Horsey",
     "Andrew Parker",
-<<<<<<< HEAD
-=======
-    "Margaret Pigman",
->>>>>>> origin/main
     "Handi Chandra Putra",
   ],
   origin_project: "Buildings Standard Scenarios",
@@ -45,8 +33,8 @@
   ],
   data_schema: {
     table_format: {
-      format_type: "unpivoted",
-      value_column: "value",
+      format_type: "pivoted",
+      pivoted_dimension_type: "metric",
     },
     data_schema_type: "one_table",
   },
@@ -54,21 +42,17 @@
   dimensions: [
     {
       type: "geography",
-<<<<<<< HEAD
       name: "County",
       display_name: "County",
-      file: "../../../project/counties.csv",
-=======
-      name: "emm_region",
-      file: "dimensions/regions.csv",
->>>>>>> origin/main
+      file: "dimensions/county.csv",
       module: "dsgrid.dimension.standard",
       class: "GeographyDimensionBaseModel",
       description: "",
     },
     {
       type: "metric",
-      name: "building_end_use",
+      name: "Building End Uses",
+      display_name: "Building End Uses",
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
       class: "EnergyEndUse",
@@ -76,12 +60,8 @@
     },
     {
       type: "model_year",
-<<<<<<< HEAD
       name: "2025 Building Model Years",
       display_name: "2025 Building Model Years",
-=======
-      name: "building_model_year",
->>>>>>> origin/main
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
@@ -90,20 +70,16 @@
     {
       type: "scenario",
       class: "Scenario",
-<<<<<<< HEAD
       name: "2025 High-Resolution Demand Scenarios",
       display_name: "High-Resolution Demand Scenarios",
       description: "2025 High-Resolution Demand Scenarios",
-=======
-      name: "high_scenario",
-      description: "IEF 2023 High-Resolution Demand Scenarios; Limited to a single, high scenario",
->>>>>>> origin/main
-      file: "../../../project/dimensions/scenarios.csv",
+      file: "dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
     {
       type: "sector",
-      name: "sector",
+      name: "Building Sectors",
+      display_name: "Building Sectors",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
@@ -112,8 +88,9 @@
     {
       type: "subsector",
       class: "Subsector",
-      name: "unspecified_subsector",
-      description: "Unspecified subsectors",
+      name: "Unspecified Subsectors",
+      display_name: "Unspecified Subsectors",
+      description: "Unspecified Subsectors",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
     },
@@ -121,7 +98,8 @@
       type: "time",
       class: "Time",
       frequency: "P0DT1H0M0.000000S",
-      name: "time_est",
+      name: "Time-2018-EST-hourly",
+      display_name: "Time EST",
       time_type: "datetime",
       leap_day_adjustment: "none",
       description: "Time dimension, 2018 hourly EST, period ending, no Leap Day Adjustment, total value",
@@ -139,7 +117,8 @@
     {
       type: "weather_year",
       class: "WeatherYear",
-      name: "weather_2018",
+      name: "2018 Weather Year",
+      display_name: "Weather 2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",
