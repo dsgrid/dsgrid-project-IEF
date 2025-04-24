@@ -15,7 +15,7 @@
             ],
           },
           geography: {
-              base_missing: ['48301'],
+              base_missing: {record_ids: ['G4803010'], dimension_name: "county"}
             },
         },
         multi_dimensional: [
