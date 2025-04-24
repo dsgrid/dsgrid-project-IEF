@@ -12,5 +12,11 @@
       file: "dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "one_to_one",
     },
+    {
+      description: "Buildings model years to project model years",
+      dimension_type: "model_year",
+      file: "dimension_mappings/model_year_to_model_year.csv",
+      mapping_type: "one_to_one",
+    },
   ]
 }
