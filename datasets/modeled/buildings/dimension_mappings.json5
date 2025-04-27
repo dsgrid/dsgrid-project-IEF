@@ -7,6 +7,12 @@
       mapping_type: "one_to_one",
     },
     {
+      description: "Buildings enduses to project enduses",
+      dimension_type: "metric",
+      file: "dimension_mappings/enduse_to_enduse.csv",
+      mapping_type: "one_to_one",
+    },
+    {
       description: "Buildings scenarios to project scenarios",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
