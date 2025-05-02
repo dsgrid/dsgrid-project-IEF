@@ -1,0 +1,15 @@
+from_id,to_id
+cement_concrete,cement_concrete
+chemical,chemical
+chemical_other,chemical
+construction,construction
+datacenter,datacenter
+food_bev,food_bev
+iron_steel,iron_steel
+iron_steel_other,iron_steel
+mining,mining
+other,other
+pesticides_fertilizer,pesticides_fertilizer
+pet_refinery,pet_refinery
+pulp_paper,pulp_paper
+water_treatment,water_treatment
