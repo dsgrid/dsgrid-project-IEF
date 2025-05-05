@@ -52,7 +52,7 @@
       class: 'ModelYear',
       name: 'model_year',
       description: 'IEF 2023 Model Years; Biennial 2024-2030, then every 5 years to 2050',
-      file: "../../../project/dimensions/model_years.csv",
+      file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
     },
     {

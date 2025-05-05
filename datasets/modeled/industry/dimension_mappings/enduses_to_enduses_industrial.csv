@@ -7,5 +7,5 @@ process_electrochemical,electricity_electrochemical_processes
 process_other,electricity_other_process
 hvac,electricity_facility_hvac
 lighting,electricity_facility_lighting
-nonprocess,electricity_other_nonprocess
+non_process,electricity_other_nonprocess
 other,electricity_other_facility_support

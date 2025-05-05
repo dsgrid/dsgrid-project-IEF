@@ -235,24 +235,6 @@
       },
     },
     {
-      dataset_id: 'ief_2025_datacenters',
-      dataset_type: 'modeled',
-      version: '1.0.0',
-      required_dimensions: {
-        single_dimensional: {
-          subsector: {
-            base: ['data_center'],
-          },
-          metric: {
-            base: ['electricity_unspecified'],
-          },
-          sector: {
-            base: ['com'],
-          },
-        },
-      },
-    },
-    {
       dataset_id: 'eia_861_annual_energy_use_state_sector',
       dataset_type: 'historical',
       version: '1.0.0',
@@ -313,7 +295,7 @@
         type: 'model_year',
         class: 'ModelYear',
         name: 'model_year',
-        description: 'IEF 2025 Model Years; Biennial 2024-2030, then every 5 years to 2050',
+        description: 'IEF 2025 Model Years',
         file: 'dimensions/model_years.csv',
         module: 'dsgrid.dimension.standard',
       },
