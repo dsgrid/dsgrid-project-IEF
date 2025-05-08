@@ -3107,30 +3107,3 @@ id,name,state,time_zone
 56041,Uinta,WY,MountainPrevailing
 56043,Washakie,WY,MountainPrevailing
 56045,Weston,WY,MountainPrevailing
-02090,Fairbanks North Star,AK,AlaskaPrevailing
-02020,Anchorage,AK,AlaskaPrevailing
-02110,Juneau,AK,AlaskaPrevailing
-02122,Kenai Peninsula,AK,AlaskaPrevailing
-02185,North Slope,AK,AlaskaPrevailing
-02261,Valdez Cordova,AK,AlaskaPrevailing
-02220,Sitka,AK,AlaskaPrevailing
-02130,Ketchikan Gateway,AK,AlaskaPrevailing
-02170,Matanuska Susitna,AK,AlaskaPrevailing
-02240,Southeast Fairbanks,AK,AlaskaPrevailing
-02150,Kodiak Island,AK,AlaskaPrevailing
-02060,Bristol Bay,AK,AlaskaPrevailing
-02016,Aleutian Islands,AK,HawaiiAleutianStandard
-02100,Haines,AK,AlaskaPrevailing
-02230,Skagway-Hoonah-Angoon,AK,AlaskaPrevailing
-02105,Skagway-Hoonah-Angoon,AK,AlaskaPrevailing
-02195,Wrangell Petersburg,AK,AlaskaPrevailing
-02275,Wrangell Petersburg,AK,AlaskaPrevailing
-02013,Aleutians East,AK,HawaiiAleutianStandard
-02070,Dillingham,AK,AlaskaPrevailing
-02198,Prince of Wales-Outer Ketchika,AK,AlaskaPrevailing
-02050,Bethel,AK,AlaskaPrevailing
-02158,Wade Hampton,AK,AlaskaPrevailing
-15009,Maui,HI,HawaiiAleutianStandard
-15001,Hawaii,HI,HawaiiAleutianStandard
-15003,Honolulu,HI,HawaiiAleutianStandard
-15007,Kauai,HI,HawaiiAleutianStandard
