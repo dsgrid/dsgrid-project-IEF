@@ -9,7 +9,7 @@
     {
       description: "Industrial dataset end uses to IEF industrial end uses",
       dimension_type: "metric",
-      file: "dimension_mappings/enduses_to_enduses_industrial.csv",
+      file: "dimension_mappings/enduse_to_enduse_industrial.csv",
       mapping_type: "many_to_one_aggregation",
     },
     {
@@ -22,7 +22,7 @@
       description: "industry counties to IEF project counties",
       dimension_type: "geography",
       file: "dimension_mappings/county_to_county.csv",
-      mapping_type: "one_to_one",
+      mapping_type: "many_to_many_explicit_multipliers",
     },
     {
       description: "industry model years to IEF project model years",
