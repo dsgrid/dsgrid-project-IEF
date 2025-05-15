@@ -18,7 +18,8 @@
               base_missing: {record_ids: ['48301'], dimension_name: "county"},
           },
           model_year: {
-            base_missing: {record_ids: ['2023'], dimension_name: "model_year"},
+              base_missing: {record_ids: ['2023'], dimension_name: "model_year"},
+
           },
         },
         multi_dimensional: [
