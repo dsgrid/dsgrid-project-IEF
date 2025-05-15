@@ -1,15 +1,11 @@
 id,name,fuel_id,unit
-electricity_computers_and_tvs,Computers and TVs,electricity,MWh
-electricity_dishwasher,Dishwasher,electricity,MWh
-electricity_clothes_washing,Clothes Washing,electricity,MWh
-electricity_drying,Drying,electricity,MWh
+electricity_computers_and_electronics,Computers and Electronics,electricity,MWh
 electricity_cooking,Cooking,electricity,MWh
-electricity_cooling_and_heating,Heating and Cooling,electricity,MWh
-electricity_fans_and_pumps,Fans and Pumps,electricity,MWh
+electricity_heating,Heating,electricity,MWh
+electricity_cooling,Cooling,electricity,MWh
+electricity_ventilation,Ventilation,electricity,MWh
 electricity_lighting,Lighting,electricity,MWh
-electricity_miscellaneous_electrical_loads,Miscellaneous Electrical Loads (MELs) & Other,electricity,MWh
-electricity_non_pc_office_equipment,Non-PC Office Equipment,electricity,MWh
-electricity_pools_and_spas,Pools and Spas,electricity,MWh
+electricity_other,Miscellaneous Electrical Loads (MELs) & Other,electricity,MWh
 electricity_refrigeration,Refrigeration,electricity,MWh
 electricity_water_heating,Water Heating,electricity,MWh
 electricity_ev_ldv_home_l1,Light-Duty EV Home Level 1 Charging,electricity,MWh
