@@ -306,7 +306,7 @@
         type: 'metric',
         class: 'EnergyEndUse',
         name: 'end_use',
-        description: 'IEF 2025 Demand End Uses', // TODO: Describe contents--level of detail, fuel types
+        description: 'IEF 2025 Demand End Uses',
         file: 'dimensions/enduses.csv',
         module: 'dsgrid.dimension.standard',
       },
