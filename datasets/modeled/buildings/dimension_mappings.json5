@@ -1,22 +1,28 @@
 {
   mappings: [
     {
-      description: "Buildings sectors to project sectors",
-      dimension_type: "sector",
-      file: "dimension_mappings/sector_to_sector.csv",
+      description: "Buildings BuildStock counties to project counties",
+      dimension_type: "geography",
+      file: "dimension_mappings/county_to_county.csv",
       mapping_type: "one_to_one",
     },
     {
-      description: "Buildings EMM to project counties",
-      dimension_type: "geography",
-      file: "dimension_mappings/emm_region_to_county.csv",
-      mapping_type: "one_to_many_disaggregation",
+      description: "Buildings enduses to project enduses",
+      dimension_type: "metric",
+      file: "dimension_mappings/enduse_to_enduse.csv",
+      mapping_type: "one_to_one",
     },
     {
-      description: "Buildings model year to project model year",
+      description: "Buildings scenarios to project scenarios",
+      dimension_type: "scenario",
+      file: "dimension_mappings/scenario_to_scenario.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "Buildings model years to project model years",
       dimension_type: "model_year",
       file: "dimension_mappings/model_year_to_model_year.csv",
-      mapping_type: "many_to_many_explicit_multipliers",
+      mapping_type: "one_to_one",
     },
   ]
 }
