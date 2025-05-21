@@ -77,6 +77,9 @@
               'ind',
             ],
           },
+          scenario: {
+            base_missing: {record_ids: ['inefficient'], dimension_name: "scenario"},
+          },
           subsector: {
             subset: [
               {
