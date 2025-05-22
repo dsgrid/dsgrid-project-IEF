@@ -18,8 +18,7 @@
               base_missing: {record_ids: ['48301'], dimension_name: "county"},
           },
           model_year: {
-              base_missing: {record_ids: ['2023'], dimension_name: "model_year"},
-
+            base_missing: {record_ids: ['2023'], dimension_name: "model_year"},
           },
         },
         multi_dimensional: [
@@ -291,7 +290,7 @@
         type: 'metric',
         class: 'EnergyEndUse',
         name: 'end_use',
-        description: 'IEF 2025 Demand End Uses',
+        description: 'IEF 2025 Demand End Uses', // TODO: Describe contents--level of detail, fuel types
         file: 'dimensions/enduses.csv',
         module: 'dsgrid.dimension.standard',
       },
@@ -307,7 +306,7 @@
         type: 'scenario',
         class: 'Scenario',
         name: 'scenario',
-        description: 'IEF 2025 High-Resolution Demand Scenarios',
+        description: 'IEF 2025 High-Resolution Demand Scenarios; Limited to a single, high scenario',
         file: 'dimensions/scenarios.csv',
         module: 'dsgrid.dimension.standard',
       },

@@ -1,0 +1,28 @@
+{
+  mappings: [
+    {
+      description: "Buildings BuildStock counties to project counties",
+      dimension_type: "geography",
+      file: "dimension_mappings/county_to_county.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "Buildings enduses to project enduses",
+      dimension_type: "metric",
+      file: "dimension_mappings/enduse_to_enduse.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "Buildings scenarios to project scenarios",
+      dimension_type: "scenario",
+      file: "dimension_mappings/scenario_to_scenario.csv",
+      mapping_type: "one_to_one",
+    },
+    {
+      description: "Buildings model years to project model years",
+      dimension_type: "model_year",
+      file: "dimension_mappings/model_year_to_model_year.csv",
+      mapping_type: "one_to_one",
+    },
+  ]
+}

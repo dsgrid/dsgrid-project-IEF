@@ -1,0 +1,30 @@
+// Add the dataset and repository paths at runtime. For example:
+// $ dsgrid registry bulk-register \
+//    --base-repo-dir ~/repos/dsgrid-project-IEF \
+//    --base-data-dir /projects/dsgrid/data-DECARB \
+//    project_registration.json5
+
+{
+  projects: [
+    {
+      project_id: "US_DOE_IEF_2025",
+      config_file: "project/project.json5"
+    }
+  ],
+  datasets: [
+    {
+      dataset_id: "ief_2025_industry",
+      dataset_path: "",
+      config_file: "datasets/modeled/industry/dataset.json5",
+      replace_dimension_names_with_ids: false
+    }
+  ],
+  dataset_submissions: [
+    {
+      project_id: "US_DOE_IEF_2025",
+      dataset_id: "ief_2025_industry",
+      dimension_mapping_file: "datasets/modeled/industry/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false
+    }
+  ]
+}
