@@ -7,5 +7,5 @@ process_electrochemical,Electro-Chemical Processes,electricity,kWh
 process_other,Other Process Use,electricity,kWh
 hvac,Facility HVAC,electricity,kWh
 lighting,Facility Lighting,electricity,kWh
-nonprocess_other,Other Nonprocess Use,electricity,kWh
+non_process,Other Nonprocess Use,electricity,kWh
 other,Miscellaneous unknown,electricity,kWh
