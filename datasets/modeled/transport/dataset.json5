@@ -1,30 +1,26 @@
 {
-  dataset_id: "ief_2023_transport",
+  dataset_id: "ief_2025_transport",
   dataset_type: "modeled",
-  data_source: "tempo evix polaris",
+  data_source: "evi-grid-national-framework",
   sector_description: "electric load associated with light, medium, and heavy-duty road transportation",
-  description: "IEF Task 6 results from TEMPO, EVI-X, and POLARIS (Nov 2023) with profiles using 2018 as the weather year",
-  origin_creator: "Arthur Yip",
+  description: "DECARB Task 6 results from the evi-grid-national-framework (Jan 2025) with profiles using 2018 as the weather year",
+  origin_creator: "Nick Reinicke",
   origin_organization: "NREL",
   origin_contributors: [
     "Arthur Yip",
     "Brennan Borlaug",
-    "Olcay Sahin",
     "Jiayun Sun",
-    "Paige Jadun",
-    "Matteo Muratori"
   ],
-  origin_project: "IEF Year 1, Task 6",
-  origin_date: "2023-11-30",
+  origin_project: "IEF Year 2, Task 2.2",
+  origin_date: "2025-01-30",
   origin_version: "1",
-  source: "TEMPO, EVI-X, and POLARIS simulations for IEF 6",
+  source: "evi-grid-national-framework simulations",
   data_classification: "low",
   tags: [
     "TEMPO",
-    "EVIX",
-    "POLARIS",
+    "evi-grid-national-framework",
+    "EVI-Pro",
     "EV",
-    "ief",
     "electric vehicle"
   ],
   trivial_dimensions: [
@@ -39,7 +35,7 @@
     data_schema_type: "one_table",
   },
   dimensions: [
-    {
+    { 
      "class": "County",
       type: "geography",
       name: "county",
@@ -54,7 +50,7 @@
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       name: "sector",
-
+      
     },
     {
       type: "subsector",
@@ -62,8 +58,8 @@
       description: "EV charging for specific EV market segments, vehicle classes, and powertrain technologies",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
-      name: "vehicle_type",
-
+      name: "subsector",
+      
     },
     {
       type: "metric",
@@ -79,14 +75,14 @@
       file: "dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
       "class": "Scenario",
-      description: "IEF High + EV Charge Management Strategy",
+      description: "IEF transport scenarios",
     },
     {
       type: "model_year",
       name: "model_year",
       file: "dimensions/years.csv",
       module: "dsgrid.dimension.standard",
-      "class": "ModelYear",
+      "class": "ModelYear",     
       description: "model years, 2025 - 2050, every 5 years",
     },
     {
@@ -100,7 +96,8 @@
     {
       "class": "Time",
       type: "time",
-      name: "hourly_for_representative_days",
+      name: "One week per month",
+      display_name: "Hourly for representative weeks",
       ranges: [
         {
           start: 1,
@@ -110,8 +107,8 @@
       time_interval_type: "period_ending",
       time_type: "representative_period",
       measurement_type: "total",
-      format: "one_weekday_day_and_one_weekend_day_per_month_by_hour",
-      description: "EVI-X Time - Month (representing seasons), one weekday and one weekend day, and hour of day.",
-    },
+      format: "one_week_per_month_by_hour",
+      description: "EVI-X Time - month, day of week, and hour of day.",
+    }, 
   ]
-}
+}    

@@ -110,72 +110,8 @@
           sector: {
             base: ['trans'],
           },
+         },
         },
-        multi_dimensional: [
-          {
-            subsector: {
-              base: [
-                'bev_compact', 'bev_midsize', 'bev_pickup', 'bev_suv',
-                'phev_compact', 'phev_midsize', 'phev_pickup', 'phev_suv',
-              ],
-            },
-            metric: {
-              base: [
-                'electricity_ev_ldv_home_l1', 'electricity_ev_ldv_home_l2',
-                'electricity_ev_ldv_work_l1', 'electricity_ev_ldv_work_l2',
-                'electricity_ev_ldv_public_l2', 'electricity_ev_ldv_public_dcfc',
-                'electricity_ev_ldv_enroute_dcfc',
-              ],
-            },
-            geography: {
-              base: ['__all__'],
-            },
-          },
-          {
-            subsector: {
-              base: [
-                'bev_light-medium_freight_truck', 'bev_medium_freight_truck',
-                'bev_heavy_freight_truck',
-                'bev_bus',
-              ],
-            },
-            metric: {
-              base: [
-                'electricity_ev_mhdv_depot_ac', 'electricity_ev_mhdv_depot_dc',
-                'electricity_ev_mhdv_opportunity_dc',
-                'electricity_ev_mhdv_enroute_dc',
-              ],
-            },
-            geography: {
-              base: ['__all__'],
-            },
-          },
-          {
-            subsector: {
-              base: ['rail_transit'],
-            },
-            metric: {
-              base: ['electricity_rail_transit'],
-            },
-            geography: {
-              base: [
-                '04013', '04019', '05119', '06001', '06013', '06037', '06067', '06073', '06075', '06081', '06085',
-                '08001', '08005', '08031', '08035', '08059', '09001', '09009', '10003', '11001', '12057', '12086',
-                '13063', '13089', '13121', '17031', '17163', '17197', '18089', '18091', '18127', '18141', '22071',
-                '24003', '24005', '24015', '24021', '24025', '24027', '24031', '24033', '24043', '24510', '25001',
-                '25005', '25009', '25017', '25021', '25023', '25025', '25027', '26163', '27003', '27053', '27123',
-                '27141', '29095', '29189', '29510', '34001', '34003', '34005', '34007', '34013', '34017', '34019',
-                '34021', '34023', '34025', '34027', '34029', '34031', '34035', '34039', '34041', '36005', '36027',
-                '36029', '36047', '36059', '36061', '36071', '36079', '36081', '36085', '36087', '36103', '36119',
-                '37119', '39035', '39061', '40109', '41005', '41051', '41067', '42003', '42017', '42029', '42043',
-                '42045', '42071', '42091', '42101', '44003', '44007', '44009', '47157', '48085', '48113', '48121',
-                '48141', '48201', '48439', '49011', '49035', '49049', '49057', '51013', '51059', '51107', '51510',
-                '51710', '53033', '53053', '53061', '54003', '54037', '55059', '55079',
-              ],
-            },
-          },
-        ],
-      },
     },
     {
       dataset_id: 'ief_2025_dgen',

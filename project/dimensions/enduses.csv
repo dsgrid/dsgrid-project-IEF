@@ -8,18 +8,17 @@ electricity_lighting,Lighting,electricity,MWh
 electricity_other,Miscellaneous Electrical Loads (MELs) & Other,electricity,MWh
 electricity_refrigeration,Refrigeration,electricity,MWh
 electricity_water_heating,Water Heating,electricity,MWh
+electricity_ev_ldv_enroute_dcfc,Light-Duty EV En-route DCFC Charging,electricity,MWh
 electricity_ev_ldv_home_l1,Light-Duty EV Home Level 1 Charging,electricity,MWh
 electricity_ev_ldv_home_l2,Light-Duty EV Home Level 2 Charging,electricity,MWh
-electricity_ev_ldv_work_l1,Light-Duty EV Workplace Level 1 Charging,electricity,MWh
-electricity_ev_ldv_work_l2,Light-Duty EV Workplace Level 2 Charging,electricity,MWh
-electricity_ev_ldv_public_l2,Light-Duty EV Public Level 2 Charging,electricity,MWh
 electricity_ev_ldv_public_dcfc,Light-Duty EV Public DCFC Charging,electricity,MWh
-electricity_ev_ldv_enroute_dcfc,Light-Duty EV En-route DCFC Charging,electricity,MWh
-electricity_ev_mhdv_depot_ac,Medium- and Heavy-Duty EV Depot AC Charging,electricity,MWh
-electricity_ev_mhdv_depot_dc,Medium- and Heavy-Duty EV Depot DC Charging,electricity,MWh
-electricity_ev_mhdv_opportunity_dc,Medium- and Heavy-Duty EV Opportunity DC Charging,electricity,MWh
-electricity_ev_mhdv_enroute_dc,Medium- and Heavy-Duty EV En-route DC EV Charging,electricity,MWh
-electricity_rail_transit,Electric Transit Rail,electricity,MWh
+electricity_ev_ldv_public_l2,Light-Duty EV Public Level 2 Charging,electricity,MWh
+electricity_ev_ldv_work_l2,Light-Duty EV Workplace Level 2 Charging,electricity,MWh
+electricity_ev_mhdv_depot_dcfc,Medium- and Heavy-Duty EV Depot DCFC Charging,electricity,MWh
+electricity_ev_mhdv_depot_l2,Medium- and Heavy-Duty EV Depot Level 2 Charging,electricity,MWh
+electricity_ev_mhdv_enroute_dcfc,Medium- and Heavy-Duty EV En-route DCFC Charging,electricity,MWh
+electricity_ev_mhdv_opportunity_dcfc,Medium- and Heavy-Duty EV Opportunity DCFC Charging,electricity,MWh
+electricity_ev_mhdv_opportunity_l2,Medium- and Heavy-Duty EV Opportunity Level 2 Charging,electricity,MWh
 electricity_conventional_boiler,Conventional Boiler,electricity,MWh
 electricity_process_heating,Process Heating,electricity,MWh
 electricity_process_cooling_and_refrigeration,Process Cooling and Refrigeration,electricity,MWh
