@@ -96,8 +96,7 @@
     {
       "class": "Time",
       type: "time",
-      name: "One week per month",
-      display_name: "Hourly for representative weeks",
+      name: "hourly_for_representative_days",
       ranges: [
         {
           start: 1,
