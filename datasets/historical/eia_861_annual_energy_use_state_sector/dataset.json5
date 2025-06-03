@@ -25,13 +25,12 @@
       pivoted_dimension_type: "metric",
     },
     data_schema_type: "one_table",
-  },
+  },      
   dimensions: [
     {
-      // this is different than the project supplemental state dimension (it includes AK and HI)
       class: 'State',
       description: 'US States',
-      file: 'dimensions/states.csv',
+      file: 'dimensions/states.csv',  // this is different than the project supplemental state dimension (it includes AK and HI)
       module: 'dsgrid.dimension.standard',
       name: 'state',
       type: 'geography',
