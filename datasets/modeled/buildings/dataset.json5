@@ -20,8 +20,8 @@
   source: "B-SS public data release, with data from ResStock (2024/resstock_amy2018_release_2) and ComStock (2025/comstock_amy2018_release_2)",
   data_classification: "low",
   tags: [
-    "res",
-    "com",
+    "residential",
+    "commercial",
     "buildings",
     "Scout",
     "ResStock",

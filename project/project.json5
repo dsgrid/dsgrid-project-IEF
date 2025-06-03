@@ -77,9 +77,6 @@
               'ind',
             ],
           },
-          scenario: {
-            base_missing: {record_ids: ['inefficient'], dimension_name: "scenario"},
-          },
           subsector: {
             subset: [
               {
@@ -306,7 +303,7 @@
         type: 'scenario',
         class: 'Scenario',
         name: 'scenario',
-        description: 'IEF 2025 High-Resolution Demand Scenarios; Limited to a single, high scenario',
+        description: 'IEF 2025 High-Resolution Demand Scenarios',
         file: 'dimensions/scenarios.csv',
         module: 'dsgrid.dimension.standard',
       },

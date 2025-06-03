@@ -9,8 +9,9 @@
   origin_contributors: [
     "Samanvitha Murthy",
     "Alexander Hubbard",
+    Ikenna Okeke
   ],
-  origin_project: "IEF Year 2 Task 2",
+  origin_project: "IEF Year 2 Task 2.1",
   origin_date: "2025-04-19",
   origin_version: "0.1.0",
   source: "LBNL, ORNL, NREL",
@@ -59,7 +60,7 @@
       type: "scenario",
       class: "Scenario",
       name: "gcam_scenario",
-      description: "IEF Year 2 Task 2 GCAM Scenarios",
+      description: "IEF Year 2 Task 2.2 GCAM Scenarios",
       file: "dimensions/gcam_scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
