@@ -240,9 +240,6 @@
       version: '1.0.0',
       required_dimensions: {
         single_dimensional: {
-          model_year: {
-            base: ['2024'],
-          },
           subsector: {
             base: ['unspecified'],
           },
