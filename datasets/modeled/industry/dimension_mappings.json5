@@ -9,15 +9,26 @@
     {
       description: "Industrial dataset end uses to IEF industrial end uses",
       dimension_type: "metric",
-      file: "dimension_mappings/enduses_to_enduses_industrial.csv",
-      mapping_type: "one_to_one",
+      file: "dimension_mappings/enduse_to_enduse_industrial.csv",
+      mapping_type: "many_to_one_aggregation",
     },
     {
-      description: "CONUS states (including D.C.) to CONUS county for IEF industrial dataset",
+      description: "Industry subsectors to project subsectors",
+      dimension_type: "subsector",
+      file: "dimension_mappings/subsector_to_subsector.csv",
+      mapping_type: "many_to_one_aggregation",
+    },
+    {
+      description: "industry counties to IEF project counties",
       dimension_type: "geography",
-      file: "dimension_mappings/state_to_county_industrial.csv",
-      mapping_type: "one_to_many_disaggregation",
-      from_fraction_tolerance: 1e-5,
+      file: "dimension_mappings/county_to_county.csv",
+      mapping_type: "many_to_many_explicit_multipliers",
+    },
+    {
+      description: "industry model years to IEF project model years",
+      dimension_type: "model_year",
+      file: "dimension_mappings/model_year_to_model_year.csv",
+      mapping_type: "one_to_one",
     },
   ],
 }

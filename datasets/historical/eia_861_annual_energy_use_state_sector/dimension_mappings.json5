@@ -25,7 +25,7 @@
       mapping_type: "duplication",
     },
     {
-      description: "2010-2024",
+      description: "2010-2023",
       dimension_type: "model_year",
       file: "dimension_mappings/model_year_to_model_year.csv",
       mapping_type: "many_to_many_explicit_multipliers",
