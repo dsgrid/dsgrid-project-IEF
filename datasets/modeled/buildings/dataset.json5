@@ -67,14 +67,14 @@
     {
       type: "scenario",
       class: "Scenario",
-      name: "building_scenarios",
+      name: "building_scenario",
       description: "2025 High-Resolution Demand Scenarios",
       file: "dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
     {
       type: "sector",
-      name: "building_sectors",
+      name: "building_sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
