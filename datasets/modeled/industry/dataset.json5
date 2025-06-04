@@ -37,7 +37,7 @@
       name: "county",
       file: "dimensions/counties.csv",
       module: "dsgrid.dimension.standard",
-      class: "GeographyDimensionBaseModel",
+      class: "County",
       description: "All US counties including AK and HI",
     },
     {
@@ -52,7 +52,7 @@
       type: 'model_year',
       class: 'ModelYear',
       name: 'model_year',
-      description: 'IEF 2023 Model Years; Biennial 2024-2030, then every 5 years to 2050',
+      description: 'All years from 2018-2050',
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
     },
