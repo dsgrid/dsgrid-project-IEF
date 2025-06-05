@@ -18,7 +18,7 @@
               base_missing: {record_ids: ['48301'], dimension_name: "county"},
           },
           model_year: {
-            base_missing: {record_ids: ['2023'], dimension_name: "model_year"},
+            base_missing: {record_ids: ['2018','2023'], dimension_name: "model_year"},
           },
         },
         multi_dimensional: [
@@ -57,6 +57,24 @@
             },
           },
         ],
+      },
+    },
+    {
+      dataset_id: 'ief_2025_buildings_state',
+      dataset_type: 'modeled',
+      version: '1.0.0',
+      required_dimensions: {
+        single_dimensional: {
+          scenario: {
+            base: ['stated'],
+          },
+          subsector: {
+            base: ['unspecified'],
+          },
+          sector: {
+            base: ['com', 'res'],
+          },
+        },
       },
     },
     {
