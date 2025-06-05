@@ -314,7 +314,7 @@
         type: 'model_year',
         class: 'ModelYear',
         name: 'model_year',
-        description: 'IEF 2025 Model Years; Biennial 2024-2030, then every 5 years to 2050',
+        description: 'IEF 2025 Model Years; 2018,2023,2024,2025, then every 5 years to 2050',
         file: 'dimensions/model_years.csv',
         module: 'dsgrid.dimension.standard',
       },

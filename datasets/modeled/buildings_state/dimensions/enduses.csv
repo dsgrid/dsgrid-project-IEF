@@ -1,0 +1,15 @@
+id,name,fuel_id,unit
+electric_heating,Heating,electricity,kWh
+electric_cooling,Cooling,electricity,kWh
+electric_computers_electronics,Computers and Electronics,electricity,kWh
+electric_cooking,Cooking,electricity,kWh
+electric_ventilation,Ventilation,electricity,kWh
+electric_lighting,Lighting,electricity,kWh
+electric_other,Other,electricity,kWh
+electric_refrigeration,Refrigeration,electricity,kWh
+non-electric_water_heating,Water Heating,other,kWh
+non-electric_heating,Heating,other,kWh
+non-electric_cooling,Cooling,other,kWh
+non-electric_cooking,Cooking,other,kWh
+non-electric_other,Other,non-electric,kWh
+non-electric_water_heating,Water Heating,other,kWh
