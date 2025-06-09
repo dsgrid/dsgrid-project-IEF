@@ -84,7 +84,7 @@
       type: "subsector",
       class: "Subsector",
       name: "unspecified_subsector",
-      description: "Unspecified Subsectors",
+      description: "Unspecified subsectors",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
     },
