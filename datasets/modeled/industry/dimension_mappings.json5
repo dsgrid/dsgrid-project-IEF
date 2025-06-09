@@ -7,7 +7,7 @@
       mapping_type: "one_to_one",
     },
     {
-      description: "Industrial dataset end uses to IEF industrial end uses",
+      description: "Industrial dataset end uses to IEF project industrial end uses",
       dimension_type: "metric",
       file: "dimension_mappings/enduse_to_enduse_industrial.csv",
       mapping_type: "many_to_one_aggregation",
