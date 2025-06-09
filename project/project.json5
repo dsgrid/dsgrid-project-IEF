@@ -241,7 +241,7 @@
       required_dimensions: {
         single_dimensional: {
           model_year: {
-            base: ['2024'],
+            base: ['2018', '2023'],
           },
           subsector: {
             base: ['unspecified'],

@@ -3,7 +3,7 @@
   data_source: 'EIA 861',
   dataset_type: 'historical',
   sector_description: 'electricity',
-  description: 'EIA 861 Utility Customer Sales (MWh) by State by Sector by Year for 2010-2022. This yearly 2010-2022 data was collected from EIA and processed by NREL dsgrid team. The Sales_Ult_Cust_<year> dataset was processed to get total sales (MWh) to customers by sector (com, res, ind, trans). The original data is utility-state, but for this dataset, we took the state sums. Furnished without Charge sales from the Operational_Data_{year} table were added to the commercial sector. Data processing scripts can be found in the dsgrid-Standard-Scenarios project repository under dsgrid-project/historical/eia_861_annual_energy_use_state_sector/scripts. Addtionally, data for years 2023 and 2024 were projected using simple linear regression.',
+  description: 'EIA 861 Utility Customer Sales (MWh) by State by Sector by Year for 2010-2023. These yearly data are collected and published by the EIA. The NREL dsgrid team calculates total sales (MWh) by sector (com, res, ind, and trans) and state for each year by aggregating EIA 861 Sales_Ult_Cust_<year> sales by sector data and EIA 861 Operational_Data_<year> furnished without charge data from the utility-state level to the state level. Energy furnished without charge is assigned to the commercial sector based on the EIA 861 survey instructions, which describe this field as capturing end uses like electricity provided "to a municipality under a franchise agreement or for public street and highway lighting", and define the commercial sector as inclusive of various public end uses (https://www.eia.gov/survey/form/eia_861/instructions.pdf). Data processing scripts are available at https://github.com/dsgrid/dsgrid-project-StandardScenarios/tree/main/dsgrid_project/datasets/historical/eia_861_annual_energy_use_state_sector/scripts.',
   origin_creator: 'Ashreeta Prasanna',
   origin_organization: 'EIA',
   origin_contributors: [
@@ -13,8 +13,8 @@
     'Elaine Hale (NREL)',
   ],
   origin_project: 'EIA 861',
-  origin_date: '2024-02-02',
-  origin_version: '2010-2022',
+  origin_date: '2025-06-03',
+  origin_version: '2010-2023',
   source: 'Data extracted from EIA 861 utility customer sales',
   data_classification: 'low',
   tags: ['historical', 'eia861', 'sales'],
@@ -25,13 +25,12 @@
       pivoted_dimension_type: "metric",
     },
     data_schema_type: "one_table",
-  },
+  },      
   dimensions: [
     {
-      // this is different than the project supplemental state dimension (it includes AK and HI)
       class: 'State',
       description: 'US States',
-      file: 'dimensions/states.csv',
+      file: 'dimensions/states.csv',  // this is different than the project supplemental state dimension (it includes AK and HI)
       module: 'dsgrid.dimension.standard',
       name: 'state',
       type: 'geography',
@@ -74,7 +73,7 @@
       file: 'dimensions/weather_years.csv',
       module: 'dsgrid.dimension.standard',
       class: 'WeatherYear',
-      description: 'Weather years, 2010-2022, Linear projection for years 2023 and 2024',
+      description: 'Weather years, 2010-2023',
     },
     {
       type: 'model_year',
@@ -82,19 +81,19 @@
       file: 'dimensions/model_years.csv',
       module: 'dsgrid.dimension.standard',
       class: 'ModelYear',
-      description: 'Model years, 2010-2022, Linear projection for years 2023 and 2024',
+      description: 'Model years, 2010-2023',
     },
     {
       type: 'time',
       class: 'AnnualTime',
       time_type: 'annual',
       module: 'dsgrid.dimension.standard',
-      description: 'Annual time 2010-2024',
+      description: 'Annual time 2010-2023',
       name: 'annual',
       ranges: [
         {
           start: '2010',
-          end: '2024',
+          end: '2023',
         },
       ],
       str_format: '%Y',
