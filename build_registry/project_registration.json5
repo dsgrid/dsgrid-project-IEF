@@ -14,7 +14,7 @@
   datasets: [
     {
       dataset_id: "ief_2025_buildings",
-      dataset_path: "buildings",
+     dataset_path: "buildings",
       config_file: "datasets/modeled/buildings/dataset.json5",
       replace_dimension_names_with_ids: false,
     },
