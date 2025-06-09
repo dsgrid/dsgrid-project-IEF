@@ -13,7 +13,7 @@
       mapping_type: "many_to_one_aggregation",
     },
     {
-      description: "Industry subsectors to project subsectors",
+      description: "Industry subsectors to IEF project subsectors",
       dimension_type: "subsector",
       file: "dimension_mappings/subsector_to_subsector.csv",
       mapping_type: "many_to_one_aggregation",
