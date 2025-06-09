@@ -7,7 +7,7 @@ electric_ventilation,Ventilation,electricity,kWh
 electric_lighting,Lighting,electricity,kWh
 electric_other,Other,electricity,kWh
 electric_refrigeration,Refrigeration,electricity,kWh
-non-electric_water_heating,Water Heating,other,kWh
+electric_water_heating,Water Heating,electricity,kWh
 non-electric_heating,Heating,other,kWh
 non-electric_cooling,Cooling,other,kWh
 non-electric_cooking,Cooking,other,kWh

@@ -30,6 +30,7 @@
   trivial_dimensions: [
     "subsector",
     "weather_year",
+    "scenario"
   ],
   data_schema: {
     table_format: {
@@ -42,7 +43,7 @@
     {
       type: "geography",
       name: "state",
-      file: "../../../project/dimensions/supplemental/states.csv",
+      file: "dimensions/states.csv",
       module: "dsgrid.dimension.standard",
       class: "GeographyDimensionBaseModel",
       description: "US lower 48 states",

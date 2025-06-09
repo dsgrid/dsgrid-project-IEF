@@ -71,10 +71,43 @@
           subsector: {
             base: ['unspecified'],
           },
-          sector: {
-            base: ['com', 'res'],
-          },
         },
+        multi_dimensional: [
+          {
+            sector: {
+              base: [
+                'com',
+              ],
+            },
+            metric: {
+              subset: [
+                {
+                  name: 'end_uses_by_sector',
+                  selectors: [
+                    'commercial_end_uses',
+                  ],
+                },
+              ],
+            },
+          },
+          {
+            sector: {
+              base: [
+                'res',
+              ],
+            },
+            metric: {
+              subset: [
+                {
+                  name: 'end_uses_by_sector',
+                  selectors: [
+                    'residential_end_uses',
+                  ],
+                },
+              ],
+            },
+          },
+        ],  
       },
     },
     {
