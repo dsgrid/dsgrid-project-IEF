@@ -45,7 +45,7 @@
       name: "county",
       file: "dimensions/county.csv",
       module: "dsgrid.dimension.standard",
-      class: "GeographyDimensionBaseModel",
+      class: "County",
       description: "US counties for lower 48 states",
     },
     {
