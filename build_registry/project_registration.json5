@@ -30,6 +30,7 @@
       config_file: "datasets/historical/eia_861_annual_energy_use_state_sector/dataset.json5",
       replace_dimension_names_with_ids: false
     },
+    {
       dataset_id: "ief_2025_buildings_state",
       dataset_path: "buildings_state",
       config_file: "datasets/modeled/buildings_state/dataset.json5",
