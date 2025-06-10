@@ -23,7 +23,7 @@
     {
       project_id: "US_DOE_IEF_2025",
       dataset_id: "ief_2025_transport",
-      dimension_mapping_file: "datasets/modeled/transport/project/dimension_mappings.json5",
+      dimension_mapping_file: "datasets/modeled/transport/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false,
     },
   ],
