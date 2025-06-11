@@ -160,6 +160,29 @@
           sector: {
             base: ['trans'],
           },
+          model_year: {
+            base_missing: {record_ids: ['2018','2023','2024'], dimension_name: "model_year"},
+          },
+          subsector: {
+            subset: [
+              {
+                name: 'subsectors_by_sector',
+                selectors: [
+                  'transportation_subsectors',
+                ],
+              },
+            ],
+          },
+          metric: {
+            subset: [
+              {
+                name: 'end_uses_by_sector',
+                selectors: [
+                  'transportation_end_uses',
+                ],
+              },
+            ],
+          },
          },
         },
     },
