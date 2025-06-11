@@ -1,0 +1,15 @@
+﻿from_id,to_id
+electric_heating,electricity_heating
+electric_cooling,electricity_cooling
+electric_computers_electronics,electricity_computers_and_electronics
+electric_cooking,electricity_cooking
+electric_ventilation,electricity_ventilation
+electric_lighting,electricity_lighting
+electric_other,electricity_other
+electric_refrigeration,electricity_refrigeration
+electric_water_heating,electricity_water_heating
+non-electric_water_heating,
+non-electric_heating,
+non-electric_cooling,
+non-electric_cooking,
+non-electric_other,

@@ -7,12 +7,15 @@ truck-medium,Medium Truck
 truck-heavy,Heavy Truck
 transit-bus,Transit Bus
 school-bus,School Bus
-naics_3273,Cement and Concrete
-naics_3253,Pesticides and Fertilizer
-naics_3311,Iron and Steel
-naics_311_312,Food and Beverage
-naics_325_other,Chemicals
-naics_3241,Petroleum Refineries
-naics_322,Pulp and Paper
-naics_3_other,Other Manufacturing
-data_center,Datacenters
+cement_concrete,Cement and Concrete
+pesticides_fertilizer,Pesticides and Fertilizer
+iron_steel,Iron and Steel
+food_bev,Food and Beverage
+chemical,Chemicals
+pet_refinery,Petroleum Refineries
+pulp_paper,Pulp and Paper
+other,Other Industry
+datacenter,Data Centers
+mining,Mining
+water_treatment,Water Supply and Treatment
+construction,Construction

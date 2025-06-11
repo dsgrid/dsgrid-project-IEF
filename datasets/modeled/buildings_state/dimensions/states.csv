@@ -1,52 +1,50 @@
-﻿id,name
+id,name
 AL,Alabama
-AK,Alaska
-AZ,Arizona
 AR,Arkansas
+AZ,Arizona
 CA,California
 CO,Colorado
 CT,Connecticut
+DC,District of Columbia
 DE,Delaware
-DC,District Of Columbia
 FL,Florida
 GA,Georgia
-HI,Hawaii
+IA,Iowa
 ID,Idaho
 IL,Illinois
 IN,Indiana
-IA,Iowa
 KS,Kansas
 KY,Kentucky
 LA,Louisiana
-ME,Maine
-MD,Maryland
 MA,Massachusetts
+MD,Maryland
+ME,Maine
 MI,Michigan
 MN,Minnesota
-MS,Mississippi
 MO,Missouri
+MS,Mississippi
 MT,Montana
+NC,North Carolina
+ND,North Dakota
 NE,Nebraska
-NV,Nevada
 NH,New Hampshire
 NJ,New Jersey
 NM,New Mexico
+NV,Nevada
 NY,New York
-NC,North Carolina
-ND,North Dakota
 OH,Ohio
 OK,Oklahoma
 OR,Oregon
 PA,Pennsylvania
-RI,Rhode Island
+RI,Rhode Island
 SC,South Carolina
 SD,South Dakota
 TN,Tennessee
 TX,Texas
 UT,Utah
-VT,Vermont
 VA,Virginia
+VT,Vermont
 WA,Washington
-WV,West Virginia
 WI,Wisconsin
+WV,West Virginia
 WY,Wyoming
