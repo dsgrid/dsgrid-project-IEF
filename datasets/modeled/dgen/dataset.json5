@@ -1,9 +1,9 @@
 {
-  dataset_id: "ief_2023_dgen",
+  dataset_id: "ief_2025_dgen",
   dataset_type: "modeled",
   data_source: "dgen",
   sector_description: "residential and commercial",
-  description: "dGen Standard Scenarios 2023 with profiles using 2018 as the weather year",
+  description: "dGen Standard Scenarios 2023 with profiles using 2018 as the weather year - using same dataset as 2023",
   origin_creator: "Ashreeta Prasanna",
   origin_organization: "NREL",
   origin_contributors: [
