@@ -4,7 +4,7 @@
       description: "GCAM scenarios to IEF scenarios",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
-      mapping_type: "one_to_one",
+      mapping_type: "duplication",
     },
     {
       description: "Industrial dataset end uses to IEF project industrial end uses",

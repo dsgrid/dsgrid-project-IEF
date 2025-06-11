@@ -18,7 +18,7 @@
               base_missing: {record_ids: ['48301'], dimension_name: "county"},
           },
           model_year: {
-            base_missing: {record_ids: ['2023'], dimension_name: "model_year"},
+            base_missing: {record_ids: ['2018','2023'], dimension_name: "model_year"},
           },
         },
         multi_dimensional: [
@@ -57,6 +57,57 @@
             },
           },
         ],
+      },
+    },
+    {
+      dataset_id: 'ief_2025_buildings_state',
+      dataset_type: 'modeled',
+      version: '1.0.0',
+      required_dimensions: {
+        single_dimensional: {
+          scenario: {
+            base: ['stated'],
+          },
+          subsector: {
+            base: ['unspecified'],
+          },
+        },
+        multi_dimensional: [
+          {
+            sector: {
+              base: [
+                'com',
+              ],
+            },
+            metric: {
+              subset: [
+                {
+                  name: 'end_uses_by_sector',
+                  selectors: [
+                    'commercial_end_uses',
+                  ],
+                },
+              ],
+            },
+          },
+          {
+            sector: {
+              base: [
+                'res',
+              ],
+            },
+            metric: {
+              subset: [
+                {
+                  name: 'end_uses_by_sector',
+                  selectors: [
+                    'residential_end_uses',
+                  ],
+                },
+              ],
+            },
+          },
+        ],  
       },
     },
     {
@@ -295,7 +346,7 @@
         type: 'model_year',
         class: 'ModelYear',
         name: 'model_year',
-        description: 'IEF 2025 Model Years',
+        description: 'IEF 2025 Model Years; 2018,2023,2024,2025, then every 5 years to 2050',
         file: 'dimensions/model_years.csv',
         module: 'dsgrid.dimension.standard',
       },

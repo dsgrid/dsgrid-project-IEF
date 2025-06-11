@@ -1,8 +1,8 @@
 {
-  dataset_id: "ief_2025_buildings",
+  dataset_id: "ief_2025_buildings_state",
   dataset_type: "modeled",
   sector_description: "residential_and_commercial_building_stock",
-  description: "High-resolution building end-use electricity load profiles for contiguous US for four scenarios, simulated using Scout with end use load profile data from ResStock and ComStock.",
+  description: "Buildings annual, state-level electricity and non-electricity consumption by end use and sector for 2018-2050 provided to calculate residuals for 2018.",
   origin_creator: "Margaret Pigman",
   origin_organization: "LBL",
   origin_contributors: [
@@ -30,11 +30,11 @@
   trivial_dimensions: [
     "subsector",
     "weather_year",
+    "scenario"
   ],
   data_schema: {
     table_format: {
-      format_type: "pivoted",
-      pivoted_dimension_type: "metric",
+      format_type: "unpivoted",
     },
     data_schema_type: "one_table",
   },
@@ -42,11 +42,11 @@
   dimensions: [
     {
       type: "geography",
-      name: "county",
-      file: "dimensions/county.csv",
+      name: "state",
+      file: "dimensions/states.csv",
       module: "dsgrid.dimension.standard",
-      class: "County",
-      description: "US counties for lower 48 states from 2015 census",
+      class: "GeographyDimensionBaseModel",
+      description: "US lower 48 states",
     },
     {
       type: "metric",
@@ -58,17 +58,17 @@
     },
     {
       type: "model_year",
-      name: "building_model_year",
+      name: "building_state_model_year",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
       class: "ModelYear",
-      description: "2024 and every 5 years from 2025 through 2050",
+      description: "All years from 2018 through 2050",
     },
     {
       type: "scenario",
       class: "Scenario",
-      name: "building_scenario",
-      description: "2025 High-Resolution Demand Scenarios",
+      name: "building_state_scenario",
+      description: "Stated Policies scenario only",
       file: "dimensions/scenarios.csv",
       module: "dsgrid.dimension.standard",
     },
@@ -89,23 +89,21 @@
       module: "dsgrid.dimension.standard",
     },
     {
-      type: "time",
-      class: "Time",
-      frequency: "P0DT1H0M0.000000S",
-      name: "time_est",
-      time_type: "datetime",
-      leap_day_adjustment: "none",
-      description: "Time dimension, 2018 hourly EST, period ending, no Leap Day Adjustment, total value",
-      time_interval_type: "period_ending",
-      str_format: "%Y-%m-%d %H:%M:%S",
-      timezone: "EasternStandard",
-      measurement_type: "total",
+      type: 'time',
+      class: 'AnnualTime',
+      time_type: 'annual',
+      module: 'dsgrid.dimension.standard',
+      description: 'Annual time 2018-2050',
+      name: 'annual',
       ranges: [
         {
-          start: "2018-01-01 00:00:00",
-          end: "2018-12-31 23:00:00",
+          start: '2018',
+          end: '2050',
         },
       ],
+      str_format: '%Y',
+      include_leap_day: true,
+      measurement_type: 'total',
     },
     {
       type: "weather_year",

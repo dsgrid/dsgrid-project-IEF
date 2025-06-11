@@ -23,13 +23,19 @@
       dataset_path: "industry",
       config_file: "datasets/modeled/industry/dataset.json5",
       replace_dimension_names_with_ids: false
-    }
+    },
     {
       dataset_id: "eia_861_annual_energy_use_state_sector",
-      dataset_path: "",
+      dataset_path: "eia861",
       config_file: "datasets/historical/eia_861_annual_energy_use_state_sector/dataset.json5",
       replace_dimension_names_with_ids: false
-    }
+    },
+    {
+      dataset_id: "ief_2025_buildings_state",
+      dataset_path: "buildings_state",
+      config_file: "datasets/modeled/buildings_state/dataset.json5",
+      replace_dimension_names_with_ids: false,
+    },
   ],
   dataset_submissions: [
     {
@@ -43,12 +49,18 @@
       dataset_id: "ief_2025_industry",
       dimension_mapping_file: "datasets/modeled/industry/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false
-    }
+    },
     {
       project_id: "US_DOE_IEF_2025",
       dataset_id: "eia_861_annual_energy_use_state_sector",
       dimension_mapping_file: "datasets/historical/eia_861_annual_energy_use_state_sector/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false
-    }
+    },
+    {
+      project_id: "US_DOE_IEF_2025",
+      dataset_id: "ief_2025_buildings_state",
+      dimension_mapping_file: "datasets/modeled/buildings_state/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false,
+    },
   ]
 }
