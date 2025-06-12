@@ -13,10 +13,10 @@
       mapping_type: "many_to_one_aggregation",
     },
     {
-      description: "dGen scenario to IEF scenario",
+      description: "dGen scenario to IEF scenarios- duplicating single available scenario for all project scenarios",
       dimension_type: "scenario",
       file: "dimension_mappings/scenario_to_scenario.csv",
-      mapping_type: "one_to_one",
+      mapping_type: "duplication",
     },
     {
       description: "2024-2050 from interpolating for every other year",

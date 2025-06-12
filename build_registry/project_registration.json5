@@ -8,8 +8,8 @@
   projects: [
     {
       project_id: "US_DOE_IEF_2025",
-      config_file: "project/project.json5"
-    }
+      config_file: "project/project.json5",
+    },
   ],
   datasets: [
     {
@@ -25,6 +25,11 @@
       replace_dimension_names_with_ids: false
     },
     {
+      dataset_id: "ief_2025_transport",
+      dataset_path: "transport",
+      config_file: "datasets/modeled/transport/dataset.json5",
+    },
+    {
       dataset_id: "eia_861_annual_energy_use_state_sector",
       dataset_path: "eia861",
       config_file: "datasets/historical/eia_861_annual_energy_use_state_sector/dataset.json5",
@@ -35,6 +40,12 @@
       dataset_path: "buildings_state",
       config_file: "datasets/modeled/buildings_state/dataset.json5",
       replace_dimension_names_with_ids: false,
+    }
+    {
+      dataset_id: "ief_2025_dgen",
+      dataset_path: "dgen",
+      config_file: "datasets/modeled/dgen/dataset.json5",
+      replace_dimension_names_with_ids: false,
     },
   ],
   dataset_submissions: [
@@ -42,12 +53,18 @@
       project_id: "US_DOE_IEF_2025",
       dataset_id: "ief_2025_buildings",
       dimension_mapping_file: "datasets/modeled/buildings/dimension_mappings.json5",
-      replace_dimension_mapping_names_with_ids: false,
+      replace_dimension_mapping_names_with_ids: false
     },
     {
       project_id: "US_DOE_IEF_2025",
       dataset_id: "ief_2025_industry",
       dimension_mapping_file: "datasets/modeled/industry/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false
+    },
+    {
+      project_id: "US_DOE_IEF_2025",
+      dataset_id: "ief_2025_transport",
+      dimension_mapping_file: "datasets/modeled/transport/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false
     },
     {
@@ -61,6 +78,12 @@
       dataset_id: "ief_2025_buildings_state",
       dimension_mapping_file: "datasets/modeled/buildings_state/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false,
+    }
+    {
+      project_id: "US_DOE_IEF_2025",
+      dataset_id: "ief_2025_dgen",
+      dimension_mapping_file: "datasets/modeled/dgen/dimension_mappings.json5",
+      replace_dimension_mapping_names_with_ids: false
     },
   ]
 }
