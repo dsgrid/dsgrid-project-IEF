@@ -3,7 +3,7 @@
   dataset_type: "modeled",
   data_source: "evi-grid-national-framework",
   sector_description: "electric load associated with light, medium, and heavy-duty road transportation",
-  description: "IEF Year 2 Task 2.2 results from the evi-grid-national-framework (Jan 2025) with profiles using 2018 as the weather year",
+  description: "IEF Year 2 Task 2-1 results from the evi-grid-national-framework (Jan 2025) with profiles using 2018 as the weather year",
   origin_creator: "Nick Reinicke",
   origin_organization: "NREL",
   origin_contributors: [
