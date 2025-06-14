@@ -39,6 +39,7 @@ class RegistryParams(BaseModel):
     data_dir: Path
     db_file: Path
 
+    @property
     def data_file(self) -> Path:
         return self.data_dir / "registry.json5"
 
@@ -116,8 +117,6 @@ def build_workflow(api: DefaultApi, workflow: WorkflowModel, ief: IefRegistry) -
         make_plots=True,
     )
     # TODO: implement a feature in torc to check software/data versions and trigger re-runs.
-    # TODO add a check to ensure this exists
-    # TODO add a check to ensure that invocation scripts exist
     config.worker_startup_script = START_SPARK_CLUSTER
     api.modify_workflow_config(workflow.key, config)
 
@@ -305,7 +304,7 @@ def add_jobs_to_workflow(
             "query",
             "project",
             "run",
-            q_output_record_file.path,
+            q_file.path,
             "-o",
             str(query_output),
         ]
