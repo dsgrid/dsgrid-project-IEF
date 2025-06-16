@@ -2,13 +2,13 @@
   "name": "industry",
   "version": "0.1.0",
   "project": {
-    "project_id": "US_DOE_IEF_2023",
+    "project_id": "US_DOE_IEF_2025",
     "dataset": {
       "dataset_id": "industry",
       "source_datasets": [
         {
           "dataset_type": "standalone",
-          "dataset_id": "ief_2023_industry"
+          "dataset_id": "ief_2025_industry"
         },
       ],
       "params": {
@@ -19,23 +19,30 @@
     "include_dsgrid_dataset_components": false,
     "version": null,
     "spark_conf_per_dataset": [],
-     //mapping_plan: [
-     // {
-     //   dataset_id: "ief_2023_industry",
-     //   mappings: [
-     //     {
-     //       dimension_name: "state",
-     //     },
-     //     {
-     //       dimension_name: "scenario",
-     //       persist: true,
-     //     },
-     //     {
-     //       dimension_name: "end_use",
-     //     },
-     //   ],
-     // },
-    //],
+     mapping_plan: [
+      {
+        dataset_id: "ief_2025_industry",
+        mappings: [
+          {
+            dimension_name: "end_use",
+          },
+          {
+            dimension_name: "subsector",
+          },
+          {
+            dimension_name: "county",
+          },
+          {
+            dimension_name: "model_year",
+	    persist: true,
+          },
+          {
+            dimension_name: "scenario",
+            persist: true,
+          },
+        ],
+      },
+    ],
   },
   "result": {
     "replace_ids_with_names": false,

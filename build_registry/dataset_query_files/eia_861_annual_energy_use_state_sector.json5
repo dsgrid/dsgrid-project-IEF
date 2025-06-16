@@ -2,7 +2,7 @@
   "name": "eia_861",
   "version": "0.1.0",
   "project": {
-    "project_id": "US_DOE_IEF_2023",
+    "project_id": "US_DOE_IEF_2025",
     "dataset": {
       "dataset_id": "eia_861",
       "source_datasets": [

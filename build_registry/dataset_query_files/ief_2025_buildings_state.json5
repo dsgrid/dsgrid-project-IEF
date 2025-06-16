@@ -2,13 +2,13 @@
   "name": "buildings_state",
   "version": "0.1.0",
   "project": {
-    "project_id": "US_DOE_IEF_2023",
+    "project_id": "US_DOE_IEF_2025",
     "dataset": {
       "dataset_id": "buildings_state",
       "source_datasets": [
         {
           "dataset_type": "standalone",
-          "dataset_id": "ief_2023_buildings_state"
+          "dataset_id": "ief_2025_buildings_state"
         },
       ],
       "params": {

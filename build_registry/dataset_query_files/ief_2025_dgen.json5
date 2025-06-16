@@ -2,13 +2,13 @@
   "name": "dgen",
   "version": "0.1.0",
   "project": {
-    "project_id": "US_DOE_IEF_2023",
+    "project_id": "US_DOE_IEF_2025",
     "dataset": {
       "dataset_id": "dgen",
       "source_datasets": [
         {
           "dataset_type": "standalone",
-          "dataset_id": "ief_2023_dgen"
+          "dataset_id": "ief_2025_dgen"
         },
       ],
       "params": {
@@ -18,7 +18,30 @@
     "excluded_dataset_ids": [],
     "include_dsgrid_dataset_components": false,
     "version": null,
-    "spark_conf_per_dataset": []
+    "spark_conf_per_dataset": [],
+     mapping_plan: [
+      {
+        dataset_id: "ief_2025_dgen",
+        mappings: [
+          {
+            dimension_name: "county",
+          },
+          {
+            dimension_name: "subsector",
+            persist: true,
+          },
+          {
+            dimension_name: "model_year",
+            persist: true,
+          },
+          {
+            dimension_name: "scenario",
+            handle_data_skew: true,
+            persist: true,
+          },
+        ],
+      },
+    ],
   },
   "result": {
     "replace_ids_with_names": false,
