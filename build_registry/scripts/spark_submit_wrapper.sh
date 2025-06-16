@@ -15,7 +15,9 @@ for arg in "$@"; do
     fi
 done
 
-export SPARK_CONF_DIR=$(pwd)/conf
+# Keep synced with star_spark_cluster.sh
+work_dir=$(pwd)/$(hostname)
+export SPARK_CONF_DIR=${work_dir}/conf
 module load python
 source ~/python-envs/dsgrid/bin/activate
 ${new_args[@]}

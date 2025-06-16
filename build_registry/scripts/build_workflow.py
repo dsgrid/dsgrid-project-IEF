@@ -81,7 +81,7 @@ class QueryParams(BaseModel):
     base_dir: Path
 
     def get_query_output_record_file(self, name: str) -> Path:
-        return self.base_dir / name / "table.parquet" / "._SUCCESS.crc"
+        return self.get_query_output_dir() / name / "table.parquet" / "._SUCCESS.crc"
 
     def get_query_output_dir(self) -> Path:
         return self.base_dir / "query_output"
