@@ -151,41 +151,52 @@
         },
       },
     },
-    {
-      dataset_id: 'ief_2025_transport',
-      dataset_type: 'modeled',
-      version: '1.0.0',
-      required_dimensions: {
-        single_dimensional: {
-          sector: {
-            base: ['trans'],
-          },
-          model_year: {
-            base_missing: {record_ids: ['2018','2023','2024'], dimension_name: "model_year"},
-          },
-          subsector: {
-            subset: [
-              {
-                name: 'subsectors_by_sector',
-                selectors: [
-                  'transportation_subsectors',
-                ],
-              },
-            ],
-          },
-          metric: {
-            subset: [
-              {
-                name: 'end_uses_by_sector',
-                selectors: [
-                  'transportation_end_uses',
-                ],
-              },
-            ],
-          },
-         },
-        },
+{
+  dataset_id: 'ief_2025_transport',
+  dataset_type: 'modeled',
+  version: '1.0.0',
+  required_dimensions: {
+    single_dimensional: {
+      sector: {
+        base: ['trans'],
+      },
+      model_year: {
+        base_missing: { record_ids: ['2018', '2023', '2024'], dimension_name: 'model_year' },
+      },
     },
+    multi_dimensional: [
+      {
+        subsector: {
+          base: ['ldv-car', 'ldv-light-truck'],
+        },
+        metric: {
+          base: [
+            'electricity_ev_ldv_home_l1', 'electricity_ev_ldv_home_l2',
+            'electricity_ev_ldv_work_l2', 'electricity_ev_ldv_public_l2',
+            'electricity_ev_ldv_public_dcfc', 'electricity_ev_ldv_enroute_dcfc'
+          ],
+        },
+        geography: {
+          base: ['__all__'],
+        },
+      },
+      {
+        subsector: {
+          base: ['truck-light', 'truck-medium', 'truck-heavy', 'school-bus']
+        },
+        metric: {
+          base: [
+            'electricity_ev_mhdv_depot_l2', 'electricity_ev_mhdv_depot_dcfc',
+            'electricity_ev_mhdv_enroute_dcfc','electricity_ev_mhdv_opportunity_dcfc','electricity_ev_mhdv_opportunity_l2'
+          ],
+        },
+        geography: {
+          base: ['__all__'],
+        },
+      }
+    ]
+  }
+},
     {
       dataset_id: 'ief_2025_dgen',
       wrap_time_allowed: true,
@@ -509,4 +520,4 @@
       },
     ],
   },
-}
+}  
