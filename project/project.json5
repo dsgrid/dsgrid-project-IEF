@@ -206,13 +206,13 @@
       },
     },
     {
-      dataset_id: 'ief_2025_res_and_com_residuals',
+      dataset_id: 'ief_2025_res_residuals_2018',
       dataset_type: 'modeled',
       version: '1.0.0',
       required_dimensions: {
         single_dimensional: {
           model_year: {
-            base: ['2024', '2030', '2050'],
+            base: ['2018'],
           },
           subsector: {
             base: ['unspecified'],
@@ -221,7 +221,10 @@
             base: ['electricity_unspecified'],
           },
           sector: {
-            base: ['com', 'res'],
+            base: ['res'],
+          },
+          scenario: {
+            base: ['stated'],
           },
         },
       },
