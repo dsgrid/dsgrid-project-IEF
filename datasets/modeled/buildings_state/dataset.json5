@@ -14,10 +14,10 @@
     "Handi Chandra Putra",
   ],
   origin_project: "Buildings Standard Scenarios",
-  origin_date: "2025-01-31",
-  origin_version: "v1",
+  data_source_date: "2025-01-31",
+  data_source_version: "v1",
   data_source: "bss",
-  source: "B-SS public data release, with data from ResStock (2024/resstock_amy2018_release_2) and ComStock (2025/comstock_amy2018_release_2)",
+  data_source_doi_url: "B-SS public data release, with data from ResStock (2024/resstock_amy2018_release_2) and ComStock (2025/comstock_amy2018_release_2)",
   data_classification: "low",
   tags: [
     "residential",
@@ -32,11 +32,16 @@
     "weather_year",
     "scenario"
   ],
-  data_schema: {
-    table_format: {
-      format_type: "unpivoted",
+  table_schema: {
+    data_file: {
+      path: "./load_data.parquet",
     },
-    data_schema_type: "one_table",
+    data_schema: {
+      table_format: {
+        format_type: "unpivoted",
+      },
+      data_schema_type: "one_table",
+    },
   },
 
   dimensions: [

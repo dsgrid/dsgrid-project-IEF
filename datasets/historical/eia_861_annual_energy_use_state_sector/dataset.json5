@@ -13,18 +13,23 @@
     'Elaine Hale (NREL)',
   ],
   origin_project: 'EIA 861',
-  origin_date: '2025-06-03',
-  origin_version: '2010-2023',
-  source: 'Data extracted from EIA 861 utility customer sales',
+  data_source_date: '2025-06-03',
+  data_source_version: '2010-2023',
+  data_source_doi_url: 'Data extracted from EIA 861 utility customer sales',
   data_classification: 'low',
   tags: ['historical', 'eia861', 'sales'],
   trivial_dimensions: ['subsector', 'scenario'],
-  data_schema: {
-    table_format: {
-      format_type: "pivoted",
-      pivoted_dimension_type: "metric",
+  table_schema: {
+    data_file: {
+      path: "./load_data.parquet",
     },
-    data_schema_type: "one_table",
+    data_schema: {
+      table_format: {
+        format_type: "pivoted",
+        pivoted_dimension_type: "metric",
+      },
+      data_schema_type: "one_table",
+    },
   },      
   dimensions: [
     {

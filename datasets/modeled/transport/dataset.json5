@@ -12,9 +12,9 @@
     "Jiayun Sun",
   ],
   origin_project: "IEF Year 2, Task 2-1",
-  origin_date: "2025-01-30",
-  origin_version: "1",
-  source: "evi-grid-national-framework simulations",
+  data_source_date: "2025-01-30",
+  data_source_version: "1",
+  data_source_doi_url: "evi-grid-national-framework simulations",
   data_classification: "low",
   tags: [
     "TEMPO",
@@ -28,11 +28,16 @@
     "sector"
   ],
   use_project_geography_time_zone: true,
-  data_schema: {
-    table_format: {
-      format_type: "unpivoted",
+  table_schema: {
+    data_file: {
+      path: "./load_data.parquet",
     },
-    data_schema_type: "one_table",
+    data_schema: {
+      table_format: {
+        format_type: "unpivoted",
+      },
+      data_schema_type: "one_table",
+    },
   },
   dimensions: [
     { 
