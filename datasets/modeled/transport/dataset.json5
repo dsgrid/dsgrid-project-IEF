@@ -30,7 +30,7 @@
   use_project_geography_time_zone: true,
   table_schema: {
     data_file: {
-      path: "./load_data.parquet",
+      path: "load_data.parquet",
     },
     data_schema: {
       table_format: {
