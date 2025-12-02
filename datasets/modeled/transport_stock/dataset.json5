@@ -1,9 +1,9 @@
 {
-  dataset_id: "ief_2025_transport",
+  dataset_id: "ief_2025_transport_stock",
   dataset_type: "modeled",
-  data_source: "evi-grid-national-framework",
-  sector_description: "electric load associated with light, medium, and heavy-duty road transportation",
-  description: "IEF Year 2 Task 2-1 results from the evi-grid-national-framework with profiles using 2018 as the weather year",
+  data_source: "evi-grid-national-framework & TEMPO",
+  sector_description: "PEV stock with light, medium, and heavy-duty road transportation",
+  description: "IEF Year 2 Task 2-1 results from the evi-grid-national-framework and TEMPO",
   origin_creator: "Nick Reinicke",
   origin_organization: "NREL",
   origin_contributors: [
@@ -63,11 +63,11 @@
     },
     {
       type: "metric",
-      name: "charging_type",
-      file: "dimensions/enduses.csv",
+      name: "vehicle_stock",
+      file: "dimensions/metrics.csv",
       module: "dsgrid.dimension.standard",
-      "class": "EnergyEndUse",
-      description: "charging type, location and power level",
+      "class": "Stock",
+      description: "Number of vehicles",
     },
     {
       type: "scenario",
@@ -86,28 +86,29 @@
       description: "model years, 2025 - 2050, every 5 years",
     },
     {
-      type: 'weather_year',
-      class: 'WeatherYear',
-      name: 'weather_2018',
-      description: 'Weather year, 2018 only',
-      file: '../../../project/dimensions/weather_years.csv',
-      module: 'dsgrid.dimension.standard',
+      type: "weather_year",
+      class: "WeatherYear",
+      name: "weather_2018",
+      description: "Weather year, 2018 only",
+      file: "../../../project/dimensions/weather_years.csv",
+      module: "dsgrid.dimension.standard",
     },
     {
-      "class": "Time",
+      "class": "AnnualTime",
       type: "time",
-      name: "hourly_for_representative_days",
+      name: "annual",
+      module: "dsgrid.dimension.standard",
       ranges: [
         {
-          start: 1,
-          end: 12,
+          start: 2025,
+          end: 2050,
+          frequency: 5
         },
       ],
-      time_interval_type: "period_ending",
-      time_type: "representative_period",
+      time_type: "annual",
       measurement_type: "total",
-      format: "one_week_per_month_by_hour",
-      description: "EVI-X Time - month, day of week, and hour of day.",
+      str_format: "%Y",
+      description: "Annual time 2025-2050 by 5 years",
     }, 
   ]
 }    
