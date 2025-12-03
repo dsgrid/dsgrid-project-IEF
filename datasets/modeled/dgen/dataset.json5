@@ -10,7 +10,7 @@
     "Ashreeta Prasanna",
     "Paritosh Das",
     "Jane Lockshin",
-    "Michaela Sizemore"
+    "Michaela Sizemore",
   ],
   origin_project: "Standard Scenarios 2023",
   data_source_date: "2024-11-01",
@@ -27,27 +27,12 @@
   ],
   trivial_dimensions: [
     "weather_year",
-    "scenario"
+    "scenario",
   ],
   use_project_geography_time_zone: true,
-  table_schema: {
-    data_file: {
-      path: "load_data.parquet",
-    },
-    lookup_data_file: {
-      path: "load_data_lookup.parquet",
-    },
-    data_schema: {
-      table_format: {
-        format_type: "pivoted",
-        pivoted_dimension_type: "metric",
-      },
-      data_schema_type: "standard",
-    },
-  },
   dimensions: [
     {
-     "class": "GeographyDimensionBaseModel",
+      "class": "GeographyDimensionBaseModel",
       type: "geography",
       name: "census_tract",
       file: "dimensions/geography.csv",
@@ -62,14 +47,14 @@
       "class": "Sector",
       description: "dGen models DPV adoption for the residential and non-residential sectors",
     },
-      {
-        class: 'Subsector',
-        description: 'tilt and azimuth of systems specified as subsectors',
-        file: 'dimensions/subsectors.csv',
-        module: 'dsgrid.dimension.standard',
-        name: 'tilt_azimuth_subsector',
-        type: 'subsector',
-      },
+    {
+      "class": "Subsector",
+      description: "tilt and azimuth of systems specified as subsectors",
+      file: "dimensions/subsectors.csv",
+      module: "dsgrid.dimension.standard",
+      name: "tilt_azimuth_subsector",
+      type: "subsector",
+    },
     {
       type: "metric",
       name: "dpv_generation",
@@ -103,22 +88,34 @@
       type: "weather_year",
     },
     {
-      type: 'time',
-      class: 'Time',
-      frequency: 'P0DT1H0M0.000000S',
-      name: 'time_utc',
-      time_type: 'datetime',
-      leap_day_adjustment: 'none',
-      description: 'Time dimension, 2018 hourly UTC, hour-beginning, no Leap Day Adjustment, total value',
-      time_interval_type: 'period_beginning',
-      str_format: '%Y-%m-%d %H:%M:%S',
-      timezone: 'UTC',
-      measurement_type: 'total',
+      type: "time",
+      "class": "Time",
+      frequency: "P0DT1H0M0.000000S",
+      name: "time_utc",
+      time_type: "datetime",
+      leap_day_adjustment: "none",
+      description: "Time dimension, 2018 hourly UTC, hour-beginning, no Leap Day Adjustment, total value",
+      time_interval_type: "period_beginning",
+      str_format: "%Y-%m-%d %H:%M:%S",
+      timezone: "UTC",
+      measurement_type: "total",
       ranges: [
-            {
-                start: '2018-01-01 00:00:00',
-                end: '2018-12-31 23:00:00',
-            },
-        ],
-    }, ]
+        {
+          start: "2018-01-01 00:00:00",
+          end: "2018-12-31 23:00:00",
+        },
+      ],
+    },
+  ],
+  data_layout: {
+    table_format: "two_table",
+    value_format: "pivoted",
+    pivoted_dimension_type: "metric",
+    data_file: {
+      path: "load_data.parquet",
+    },
+    lookup_data_file: {
+      path: "load_data_lookup.parquet",
+    },
+  },
 }

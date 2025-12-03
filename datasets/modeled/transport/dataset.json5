@@ -21,27 +21,16 @@
     "evi-grid-national-framework",
     "EVI-Pro",
     "EV",
-    "electric vehicle"
+    "electric vehicle",
   ],
   trivial_dimensions: [
     "weather_year",
-    "sector"
+    "sector",
   ],
   use_project_geography_time_zone: true,
-  table_schema: {
-    data_file: {
-      path: "load_data.parquet",
-    },
-    data_schema: {
-      table_format: {
-        format_type: "unpivoted",
-      },
-      data_schema_type: "one_table",
-    },
-  },
   dimensions: [
-    { 
-     "class": "County",
+    {
+      "class": "County",
       type: "geography",
       name: "county",
       file: "dimensions/counties.csv",
@@ -55,7 +44,6 @@
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       name: "sector",
-      
     },
     {
       type: "subsector",
@@ -64,7 +52,6 @@
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
       name: "subsector",
-      
     },
     {
       type: "metric",
@@ -87,16 +74,16 @@
       name: "model_year",
       file: "dimensions/years.csv",
       module: "dsgrid.dimension.standard",
-      "class": "ModelYear",     
+      "class": "ModelYear",
       description: "model years, 2025 - 2050, every 5 years",
     },
     {
-      type: 'weather_year',
-      class: 'WeatherYear',
-      name: 'weather_2018',
-      description: 'Weather year, 2018 only',
-      file: '../../../project/dimensions/weather_years.csv',
-      module: 'dsgrid.dimension.standard',
+      type: "weather_year",
+      "class": "WeatherYear",
+      name: "weather_2018",
+      description: "Weather year, 2018 only",
+      file: "../../../project/dimensions/weather_years.csv",
+      module: "dsgrid.dimension.standard",
     },
     {
       "class": "Time",
@@ -113,6 +100,13 @@
       measurement_type: "total",
       format: "one_week_per_month_by_hour",
       description: "EVI-X Time - month, day of week, and hour of day.",
-    }, 
-  ]
-}    
+    },
+  ],
+  data_layout: {
+    table_format: "one_table",
+    value_format: "stacked",
+    data_file: {
+      path: "load_data.parquet",
+    },
+  },
+}

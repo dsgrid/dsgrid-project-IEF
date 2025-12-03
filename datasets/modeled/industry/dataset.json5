@@ -23,21 +23,6 @@
     "sector",
     "weather_year",
   ],
-  table_schema: {
-    data_file: {
-      path: "load_data.parquet",
-    },
-    lookup_data_file: {
-      path: "load_data_lookup.parquet",
-    },
-    data_schema: {
-      table_format: {
-        format_type: "pivoted",
-        pivoted_dimension_type: "metric",
-      },
-      data_schema_type: "standard",
-    },
-  },
   use_project_geography_time_zone: true,
   dimensions: [
     {
@@ -45,7 +30,7 @@
       name: "county",
       file: "dimensions/counties.csv",
       module: "dsgrid.dimension.standard",
-      class: "GeographyDimensionBaseModel",
+      "class": "GeographyDimensionBaseModel",
       description: "All US counties including AK and HI",
     },
     {
@@ -53,20 +38,20 @@
       name: "industry_end_use",
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
-      class: "EnergyEndUse",
+      "class": "EnergyEndUse",
       description: "MECS Industry End Uses",
     },
     {
-      type: 'model_year',
-      class: 'ModelYear',
-      name: 'model_year',
-      description: 'All years from 2018-2050',
+      type: "model_year",
+      "class": "ModelYear",
+      name: "model_year",
+      description: "All years from 2018-2050",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
     },
     {
       type: "scenario",
-      class: "Scenario",
+      "class": "Scenario",
       name: "gcam_scenario",
       description: "IEF Year 2 Task 2.2 GCAM Scenarios",
       file: "dimensions/gcam_scenarios.csv",
@@ -77,12 +62,12 @@
       name: "sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
-      class: "Sector",
+      "class": "Sector",
       description: "Industrial Sector",
     },
     {
       type: "subsector",
-      class: "Subsector",
+      "class": "Subsector",
       name: "subsector",
       description: "Industrial subsectors",
       file: "dimensions/subsectors.csv",
@@ -90,13 +75,15 @@
     },
     {
       type: "time",
-      class: "Time",
+      "class": "Time",
       time_type: "index",
       name: "ind_time",
       description: "Industrial 8760-indexed time with 2018-01-01 00:00:00 start, stitched from representative diurnal profiles in local clock time. The data are laid out like standard time and have days of the week aligned with what's expected for weather year 2018, but both the data and timestamps need daylight saving adjustment to local prevailing time.",
       time_interval_type: "period_beginning",
       str_format: "%Y-%m-%d %H:%M:%S",
-      starting_timestamps: ["2018-01-01 00:00:00"],
+      starting_timestamps: [
+        "2018-01-01 00:00:00",
+      ],
       frequency: "P0DT1H0M0.000000S",
       measurement_type: "total",
       ranges: [
@@ -108,11 +95,22 @@
     },
     {
       type: "weather_year",
-      class: "WeatherYear",
+      "class": "WeatherYear",
       name: "weather_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",
     },
   ],
+  data_layout: {
+    table_format: "two_table",
+    value_format: "pivoted",
+    pivoted_dimension_type: "metric",
+    data_file: {
+      path: "load_data.parquet",
+    },
+    lookup_data_file: {
+      path: "load_data_lookup.parquet",
+    },
+  },
 }

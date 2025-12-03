@@ -25,32 +25,20 @@
     "buildings",
     "Scout",
     "ResStock",
-    "ComStock"
+    "ComStock",
   ],
   trivial_dimensions: [
     "subsector",
     "weather_year",
-    "scenario"
+    "scenario",
   ],
-  table_schema: {
-    data_file: {
-      path: "load_data.parquet",
-    },
-    data_schema: {
-      table_format: {
-        format_type: "unpivoted",
-      },
-      data_schema_type: "one_table",
-    },
-  },
-
   dimensions: [
     {
       type: "geography",
       name: "state",
       file: "dimensions/states.csv",
       module: "dsgrid.dimension.standard",
-      class: "GeographyDimensionBaseModel",
+      "class": "GeographyDimensionBaseModel",
       description: "US lower 48 states",
     },
     {
@@ -58,7 +46,7 @@
       name: "building_end_use",
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
-      class: "EnergyEndUse",
+      "class": "EnergyEndUse",
       description: "Scout residential and commercial end uses (N=9) based on EIA Annual Energy Outlook",
     },
     {
@@ -66,12 +54,12 @@
       name: "building_state_model_year",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
-      class: "ModelYear",
+      "class": "ModelYear",
       description: "All years from 2018 through 2050",
     },
     {
       type: "scenario",
-      class: "Scenario",
+      "class": "Scenario",
       name: "building_state_scenario",
       description: "Stated Policies scenario only",
       file: "dimensions/scenarios.csv",
@@ -82,41 +70,48 @@
       name: "building_sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
-      class: "Sector",
+      "class": "Sector",
       description: "Building Sectors",
     },
     {
       type: "subsector",
-      class: "Subsector",
+      "class": "Subsector",
       name: "unspecified_subsector",
       description: "Unspecified subsectors",
       file: "dimensions/subsectors.csv",
       module: "dsgrid.dimension.standard",
     },
     {
-      type: 'time',
-      class: 'AnnualTime',
-      time_type: 'annual',
-      module: 'dsgrid.dimension.standard',
-      description: 'Annual time 2018-2050',
-      name: 'annual',
+      type: "time",
+      "class": "AnnualTime",
+      time_type: "annual",
+      module: "dsgrid.dimension.standard",
+      description: "Annual time 2018-2050",
+      name: "annual",
       ranges: [
         {
-          start: '2018',
-          end: '2050',
+          start: "2018",
+          end: "2050",
         },
       ],
-      str_format: '%Y',
+      str_format: "%Y",
       include_leap_day: true,
-      measurement_type: 'total',
+      measurement_type: "total",
     },
     {
       type: "weather_year",
-      class: "WeatherYear",
+      "class": "WeatherYear",
       name: "weather_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",
     },
   ],
+  data_layout: {
+    table_format: "one_table",
+    value_format: "stacked",
+    data_file: {
+      path: "load_data.parquet",
+    },
+  },
 }

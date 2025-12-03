@@ -6,7 +6,7 @@ CLI COMMANDS:
 --------------
 
 # configure dsgrid (feel free to use a different database name)
-dsgrid config create -u http://localhost:8529 -N test-dsgrid --offline
+dsgrid config create -u http://localhost:8529 -N test-dsgrid
 
 # register the project
 dsgrid registry projects register "dsgrid-project-IEF/project/project.json5" --log-message "test"
