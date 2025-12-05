@@ -8,39 +8,31 @@
   origin_contributors: [
     "Ashreeta Prasanna",
     "Elaine Hale",
-    "Daniel Thom"
+    "Daniel Thom",
   ],
   origin_project: "IEF",
-  origin_date: "2024-04-04",
-  origin_version: "v0.1.0",
+  data_source_date: "2024-04-04",
+  data_source_version: "v0.1.0",
   data_source: "EIA, NREL, Scout, dGen",
-  source: "NREL",
+  data_source_doi_url: "NREL",
   data_classification: "low",
   tags: [
     "residential",
     "commercial",
-    "residual"
+    "residual",
   ],
   trivial_dimensions: [
     "scenario",
     "weather_year",
-    "subsector"
+    "subsector",
   ],
-  data_schema: {
-    table_format: {
-      format_type: "unpivoted",
-      value_column: "value",
-    },
-    data_schema_type: "one_table",
-  },
-
   dimensions: [
     {
       type: "geography",
       name: "emm_region",
       file: "../../../datasets/modeled/buildings/dimensions/regions.csv",
       module: "dsgrid.dimension.standard",
-      class: "GeographyDimensionBaseModel",
+      "class": "GeographyDimensionBaseModel",
       description: "25 US EIA Electricity Market Module (EMM) regions with county-level representation based on equal weighting for each county within an EMM region (https://www.eia.gov/outlooks/aeo/pdf/nerc_map.pdf)",
     },
     {
@@ -48,7 +40,7 @@
       name: "unspecified_electricity",
       file: "../../../datasets/modeled/dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
-      class: "EnergyEndUse",
+      "class": "EnergyEndUse",
       description: "Unspecified end use electricity",
     },
     {
@@ -56,12 +48,12 @@
       name: "building_model_year",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
-      class: "ModelYear",
+      "class": "ModelYear",
       description: "Current year 2024 and future snapshot years 2030 and 2050",
     },
     {
       type: "scenario",
-      class: "Scenario",
+      "class": "Scenario",
       name: "high_scenario",
       description: "IEF 2023 High-Resolution Demand Scenarios; Limited to a single, high scenario",
       file: "../../../project/dimensions/scenarios.csv",
@@ -72,12 +64,12 @@
       name: "sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
-      class: "Sector",
+      "class": "Sector",
       description: "Building Sectors",
     },
     {
       type: "subsector",
-      class: "Subsector",
+      "class": "Subsector",
       name: "unspecified_subsector",
       description: "",
       file: "../../../datasets/modeled/buildings/dimensions/subsectors.csv",
@@ -85,7 +77,7 @@
     },
     {
       type: "time",
-      class: "Time",
+      "class": "Time",
       frequency: "P0DT1H0M0.000000S",
       name: "time_est",
       time_type: "datetime",
@@ -104,11 +96,18 @@
     },
     {
       type: "weather_year",
-      class: "WeatherYear",
+      "class": "WeatherYear",
       name: "weather_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",
     },
   ],
+  data_layout: {
+    table_format: "one_table",
+    value_format: "stacked",
+    data_file: {
+      path: "load_data.parquet",
+    },
+  },
 }

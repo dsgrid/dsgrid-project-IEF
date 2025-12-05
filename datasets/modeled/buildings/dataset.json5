@@ -14,10 +14,10 @@
     "Handi Chandra Putra",
   ],
   origin_project: "Buildings Standard Scenarios",
-  origin_date: "2025-01-31",
-  origin_version: "v1",
+  data_source_date: "2025-01-31",
+  data_source_version: "v1",
   data_source: "bss",
-  source: "B-SS public data release, with data from ResStock (2024/resstock_amy2018_release_2) and ComStock (2025/comstock_amy2018_release_2)",
+  data_source_doi_url: "B-SS public data release, with data from ResStock (2024/resstock_amy2018_release_2) and ComStock (2025/comstock_amy2018_release_2)",
   data_classification: "low",
   tags: [
     "residential",
@@ -25,27 +25,19 @@
     "buildings",
     "Scout",
     "ResStock",
-    "ComStock"
+    "ComStock",
   ],
   trivial_dimensions: [
     "subsector",
     "weather_year",
   ],
-  data_schema: {
-    table_format: {
-      format_type: "pivoted",
-      pivoted_dimension_type: "metric",
-    },
-    data_schema_type: "one_table",
-  },
-
   dimensions: [
     {
       type: "geography",
       name: "county",
       file: "dimensions/county.csv",
       module: "dsgrid.dimension.standard",
-      class: "GeographyDimensionBaseModel",
+      "class": "GeographyDimensionBaseModel",
       description: "US counties for lower 48 states from 2015 census",
     },
     {
@@ -53,7 +45,7 @@
       name: "building_end_use",
       file: "dimensions/enduses.csv",
       module: "dsgrid.dimension.standard",
-      class: "EnergyEndUse",
+      "class": "EnergyEndUse",
       description: "Scout residential and commercial end uses (N=9) based on EIA Annual Energy Outlook",
     },
     {
@@ -61,12 +53,12 @@
       name: "building_model_year",
       file: "dimensions/model_years.csv",
       module: "dsgrid.dimension.standard",
-      class: "ModelYear",
+      "class": "ModelYear",
       description: "2024 and every 5 years from 2025 through 2050",
     },
     {
       type: "scenario",
-      class: "Scenario",
+      "class": "Scenario",
       name: "building_scenario",
       description: "2025 High-Resolution Demand Scenarios",
       file: "dimensions/scenarios.csv",
@@ -77,12 +69,12 @@
       name: "building_sector",
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
-      class: "Sector",
+      "class": "Sector",
       description: "Building Sectors",
     },
     {
       type: "subsector",
-      class: "Subsector",
+      "class": "Subsector",
       name: "unspecified_subsector",
       description: "Unspecified subsectors",
       file: "dimensions/subsectors.csv",
@@ -90,7 +82,7 @@
     },
     {
       type: "time",
-      class: "Time",
+      "class": "Time",
       frequency: "P0DT1H0M0.000000S",
       name: "time_est",
       time_type: "datetime",
@@ -109,11 +101,19 @@
     },
     {
       type: "weather_year",
-      class: "WeatherYear",
+      "class": "WeatherYear",
       name: "weather_2018",
       description: "Weather year, 2018 only",
       file: "../../../project/dimensions/weather_years.csv",
       module: "dsgrid.dimension.standard",
     },
   ],
+  data_layout: {
+    table_format: "one_table",
+    value_format: "pivoted",
+    pivoted_dimension_type: "metric",
+    data_file: {
+      path: "load_data.parquet",
+    },
+  },
 }

@@ -1,7 +1,7 @@
 // Add the dataset and repository paths at runtime. For example:
 // $ dsgrid registry bulk-register \
-//    --base-repo-dir ~/repos/dsgrid-project-IEF \
-//    --base-data-dir /projects/dsgrid/IEF-Task2/data \
+//    --repo-base-dir ~/repos/dsgrid-project-IEF \
+//    --data-base-dir /projects/dsgrid/IEF-Task2/data \
 //    project_registration.json5
 
 {
