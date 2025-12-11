@@ -209,7 +209,7 @@
             ],
           },
           metric: {
-            base: ['vehicle_stock'],
+            base: {record_ids: ['vehicle_stock'], dimension_name: 'stock'},
           }
          },
         },
@@ -228,7 +228,7 @@
             base: ['unspecified'],
           },
           metric: {
-            base: ['electricity_dpv'],
+            base: {record_ids: ['electricity_dpv'], dimension_name: 'end_use'},
           },
         },
       },
@@ -246,7 +246,7 @@
             base: ['unspecified'],
           },
           metric: {
-            base: ['electricity_unspecified'],
+            base: {record_ids: ['electricity_unspecified'], dimension_name: 'end_use'},
           },
           sector: {
             base: ['com', 'res'],
@@ -264,7 +264,7 @@
             base: ['unspecified'],
           },
           metric: {
-            base: ['electricity_unspecified'],
+            base: {record_ids: ['electricity_unspecified'], dimension_name: 'end_use'},
           },
           sector: {
             base: ['ind'],
@@ -285,7 +285,7 @@
             base: ['unspecified'],
           },
           metric: {
-            base: ['electricity_unspecified'],
+            base: {record_ids: ['electricity_unspecified'], dimension_name: 'end_use'},
           },
           sector: {
             base: ['com', 'res', 'ind', 'trans'],
@@ -327,6 +327,14 @@
         name: 'end_use',
         description: 'IEF 2025 Demand End Uses', // TODO: Describe contents--level of detail, fuel types
         file: 'dimensions/enduses.csv',
+        module: 'dsgrid.dimension.standard',
+      },
+      {
+        type: 'metric',
+        class: 'Stock',
+        name: 'stock',
+        description: 'IEF 2025 Vehicle Stock', // TODO: Describe contents--level of detail, fuel types
+        file: 'dimensions/stock.csv',
         module: 'dsgrid.dimension.standard',
       },
       {
