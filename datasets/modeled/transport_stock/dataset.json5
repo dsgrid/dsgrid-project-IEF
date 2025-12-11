@@ -12,9 +12,9 @@
     "Jiayun Sun",
   ],
   origin_project: "IEF Year 2, Task 2-1",
-  origin_date: "2025-01-30",
-  origin_version: "1",
-  source: "evi-grid-national-framework simulations",
+  data_source_date: "2025-01-30",
+  data_source_version: "1",
+  data_source_doi_url: "evi-grid-national-framework simulations",
   data_classification: "low",
   tags: [
     "TEMPO",
@@ -28,11 +28,13 @@
     "sector"
   ],
   use_project_geography_time_zone: true,
-  data_schema: {
-    table_format: {
-      format_type: "unpivoted",
+  data_layout: {
+    table_format: "one_table",
+    value_format: "stacked",
+    data_file: {
+      path: "vehicle_stock_dsgrid.csv",
     },
-    data_schema_type: "one_table",
+    missing_associations: ["ief_2025_transport_stock__missing_dimension_record_combinations.parquet"]
   },
   dimensions: [
     { 
@@ -94,21 +96,23 @@
       module: "dsgrid.dimension.standard",
     },
     {
-      "class": "AnnualTime",
       type: "time",
-      name: "annual",
+      "class": "AnnualTime",
+      time_type: "annual",
       module: "dsgrid.dimension.standard",
+      description: "Annual time 2025-2050",
+      name: "time_year",
       ranges: [
         {
-          start: 2025,
-          end: 2050,
-          frequency: 5
+          start: "2025",
+          end: "2050",
+          // str_format: "%Y",
+          // frequency: 5, // int
         },
       ],
-      time_type: "annual",
+      
+      include_leap_day: true,
       measurement_type: "total",
-      str_format: "%Y",
-      description: "Annual time 2025-2050 by 5 years",
-    }, 
+    },
   ]
 }    

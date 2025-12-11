@@ -187,6 +187,34 @@
         },
     },
     {
+      dataset_id: 'ief_2025_transport_stock',
+      dataset_type: 'modeled',
+      version: '1.0.0',
+      required_dimensions: {
+        single_dimensional: {
+          sector: {
+            base: ['trans'],
+          },
+          model_year: {
+            base_missing: {record_ids: ['2018','2023','2024'], dimension_name: "model_year"},
+          },
+          subsector: {
+            subset: [
+              {
+                name: 'subsectors_by_sector',
+                selectors: [
+                  'transportation_subsectors',
+                ],
+              },
+            ],
+          },
+          metric: {
+            base: ['vehicle_stock'],
+          }
+         },
+        },
+    },
+    {
       dataset_id: 'ief_2025_dgen',
       wrap_time_allowed: true,
       dataset_type: 'modeled',
