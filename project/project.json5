@@ -380,7 +380,7 @@
         description: 'Selects subsectors by sector.',
         type: 'subsector',
         file: 'dimensions/subset/subsectors_by_sector.csv',
-        create_supplemental_dimension: false,
+        create_supplemental_dimension: true,
         selectors: [
           {
             name: 'residential_subsectors',
@@ -405,7 +405,7 @@
         description: 'Provides selection of end uses by fuel type.csv',
         type: 'metric',
         file: 'dimensions/subset/end_uses_by_fuel_type.csv',
-        create_supplemental_dimension: false,
+        create_supplemental_dimension: true,
         selectors: [
           {
             name: 'electricity_end_uses',
