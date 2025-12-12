@@ -3,7 +3,7 @@
       {
       description: "scenarios with variations on EV charging behavior to IEF High default (immediate unmanaged)",
       dimension_type: "scenario",
-      file: "dimension_mappings/scenario_to_scenario.csv",
+      file: "../transport/dimension_mappings/scenario_to_scenario.csv",
       mapping_type: "one_to_one",
     },
     {
@@ -15,7 +15,7 @@
     {
       description: "transport 2023 counties to IEF project counties",
       dimension_type: "geography",
-      file: "dimension_mappings/county_to_county.csv",
+      file: "../transport/dimension_mappings/county_to_county.csv",
       mapping_type: "many_to_many_explicit_multipliers",
     },
   ]

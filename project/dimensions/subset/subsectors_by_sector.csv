@@ -1,7 +1,9 @@
 id,commercial_subsectors,industrial_subsectors,residential_subsectors,transportation_subsectors
 unspecified,x,,x,
 ldv-car,,,,x
+ldv-car-phev,,,,x
 ldv-light-truck,,,,x
+ldv-light-truck-phev,,,,x
 truck-light,,,,x
 truck-medium,,,,x
 truck-heavy,,,,x
