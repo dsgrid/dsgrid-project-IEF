@@ -333,7 +333,7 @@
         type: 'metric',
         class: 'Stock',
         name: 'stock',
-        description: 'IEF 2025 Vehicle Stock', // TODO: Describe contents--level of detail, fuel types
+        description: 'IEF 2025 Vehicle Stock', 
         file: 'dimensions/stock.csv',
         module: 'dsgrid.dimension.standard',
       },

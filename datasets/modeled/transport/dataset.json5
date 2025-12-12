@@ -106,8 +106,8 @@
     table_format: "one_table",
     value_format: "stacked",
     data_file: {
-      path: "table.parquet",
+      path: "table-debug.parquet",
     },
-    missing_associations: ["ief_2025_transport__missing_dimension_record_combinations.parquet"]
+    // missing_associations: ["ief_2025_transport__missing_dimension_record_combinations.parquet"]
   },
 }
