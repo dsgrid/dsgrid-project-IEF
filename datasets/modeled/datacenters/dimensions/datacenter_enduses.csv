@@ -1,0 +1,11 @@
+id,name,fuel_id,unit
+electricity_conventional_boiler,Conventional Boiler,electricity,MWh
+electricity_electrochemical_processes,Electro-Chemical Process,electricity,MWh
+electricity_facility_hvac,Facility HVAC,electricity,MWh
+electricity_facility_lighting,Facility Lighting,electricity,MWh
+electricity_machine_drive,Machine Drive,electricty,MWh
+electricity_other_facility_support,Other Facility Support,electricity,MWh
+electricity_other_nonprocess,Other Nonprocess,electricity,MWh
+electricity_other_process,Other Process,electricity,MWh
+electricity_process_cooling_and_refrigeration,Process Cooling and Refrigeration,electricity,MWh
+electricity_process_heating,Process Heating,electricity,MWh

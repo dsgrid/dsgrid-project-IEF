@@ -13,7 +13,8 @@
   ],
   origin_project: "IEF Year 2 Task 2.1",
   origin_date: "2025-04-19",
-  origin_version: "0.1.0",
+  origin_version: "1.0.0",
+  version: "1.0.0",
   source: "LBNL, ORNL, NREL",
   data_classification: "low",
   tags: [

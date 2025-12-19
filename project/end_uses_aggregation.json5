@@ -1,0 +1,17 @@
+{
+  supplemental_dimensions: [
+    {
+      class: 'EnergyEndUse',
+      description: 'Aggregated end use',
+      file: 'dimensions/supplemental/all_enduses.csv',
+      module: 'dsgrid.dimension.standard',
+      name: 'agg_electricity_end_uses',
+      type: 'metric',
+      mapping: {
+        description: 'aggregated electricity end uses',
+        file: 'dimension_mappings/lookup_all_enduses_to_agg_enduse.csv',
+        mapping_type: 'many_to_one_aggregation',
+      },
+    },
+  ]
+}

@@ -1,9 +1,9 @@
 {
   mappings: [
     {
-      description: "EIA 861 State to County mapping using proportion of state population in 2018",
+      description: "CONUS states (including D.C.) to CONUS county for DECARB industrial dataset",
       dimension_type: "geography",
-      file: "../../../datasets/historical/eia_861_annual_energy_use_state_sector/dimension_mappings/state_to_county.csv",
+      file: "dimension_mappings/state_to_county_industrial.csv",
       mapping_type: "many_to_many_disaggregation",
     },
     {

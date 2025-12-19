@@ -1,8 +1,8 @@
 {
-  dataset_id: "ief_2025_res_residuals",
+  dataset_id: "ief_2025_com_residuals",
   dataset_type: "modeled",
-  sector_description: "Residential",
-  description: "Residuals for the contiguous US for IEF 2025 Stated Policies Scenario, calculated using buildings, dgen and eia861 data for 2018.",
+  sector_description: "Commercial",
+  description: "Residuals for the contiguous US for IEF 2025 Stated Policies Scenario, calculated using buildings, industry (data centers and water treatment), dgen and eia861 data for 2018.",
   origin_creator: "Ashreeta Prasanna",
   origin_organization: "NREL",
   origin_contributors: [
@@ -17,7 +17,7 @@
   source: "NREL",
   data_classification: "low",
   tags: [
-    "residential",
+    "commercial",
     "residual"
   ],
   trivial_dimensions: ['weather_year', 'scenario','sector','subsector'],

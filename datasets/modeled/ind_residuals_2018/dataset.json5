@@ -1,8 +1,8 @@
 {
-  dataset_id: "ief_2025_res_residuals",
+  dataset_id: "ief_2025_ind_residuals",
   dataset_type: "modeled",
-  sector_description: "Residential",
-  description: "Residuals for the contiguous US for IEF 2025 Stated Policies Scenario, calculated using buildings, dgen and eia861 data for 2018.",
+  sector_description: "Industrial",
+  description: "Residuals for the contiguous US for IEF 2025 Stated Policies Scenario, calculated using industry (excluding data centers and water treatment)and eia861 data for 2018.",
   origin_creator: "Ashreeta Prasanna",
   origin_organization: "NREL",
   origin_contributors: [
@@ -13,11 +13,11 @@
   origin_project: "IEF",
   origin_date: "2025-07-09",
   origin_version: "v0.1.0",
-  data_source: "EIA, NREL, Scout, dGen",
+  data_source: "EIA, NREL, IGATE",
   source: "NREL",
   data_classification: "low",
   tags: [
-    "residential",
+    "industrial",
     "residual"
   ],
   trivial_dimensions: ['weather_year', 'scenario','sector','subsector'],
@@ -68,7 +68,7 @@
       file: "dimensions/sectors.csv",
       module: "dsgrid.dimension.standard",
       class: "Sector",
-      description: "Residential Sector",
+      description: "Industrial Sector",
     },
     {
       type: "subsector",
