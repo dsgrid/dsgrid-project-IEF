@@ -85,7 +85,7 @@
       description: "Time dimension, 2018 hourly EST, period ending, no Leap Day Adjustment, total value",
       time_interval_type: "period_beginning",
       str_format: "%Y-%m-%d %H:%M:%S",
-      timezone: "EasternStandard",
+      timezone: "Etc/GMT+5",
       measurement_type: "total",
       ranges: [
         {
