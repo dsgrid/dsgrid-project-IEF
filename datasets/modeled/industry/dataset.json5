@@ -28,7 +28,7 @@
     {
       type: "geography",
       name: "county",
-      file: "dimensions/counties.parquet",
+      file: "dimensions/counties.csv",
       module: "dsgrid.dimension.standard",
       "class": "GeographyDimensionBaseModel",
       description: "All US counties including AK and HI",
