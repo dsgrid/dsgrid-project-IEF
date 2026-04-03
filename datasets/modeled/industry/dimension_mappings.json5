@@ -13,16 +13,10 @@
       mapping_type: "many_to_one_aggregation",
     },
     {
-      description: "Industry subsectors to IEF project subsectors",
-      dimension_type: "subsector",
-      file: "dimension_mappings/subsector_to_subsector.csv",
-      mapping_type: "many_to_one_aggregation",
-    },
-    {
       description: "industry counties to IEF project counties",
       dimension_type: "geography",
       file: "dimension_mappings/county_to_county.csv",
-      mapping_type: "many_to_many_explicit_multipliers",
+      mapping_type: "one_to_one",
     },
     {
       description: "industry model years to IEF project model years",
