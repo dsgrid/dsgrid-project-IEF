@@ -108,5 +108,8 @@
     data_file: {
       path: "eia861/load_data.parquet",
     },
+    expected_associations: [
+      "expected_associations"
+    ],
   },
 }

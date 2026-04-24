@@ -115,5 +115,8 @@
     data_file: {
       path: "buildings/load_data.parquet",
     },
+    missing_associations: [
+      "missing_associations"
+    ],
   },
 }
