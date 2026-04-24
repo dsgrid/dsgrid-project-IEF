@@ -111,7 +111,7 @@
     table_format: "one_table",
     value_format: "stacked",
     data_file: {
-      path: "load_data.parquet",
+      path: "buildings_state/load_data.parquet",
     },
   },
 }
