@@ -106,7 +106,7 @@
     value_format: "pivoted",
     pivoted_dimension_type: "metric",
     data_file: {
-      path: "load_data.parquet",
+      path: "eia861/load_data.parquet",
     },
   },
 }

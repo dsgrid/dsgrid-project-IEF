@@ -115,7 +115,7 @@
       path: "load_data.parquet",
     },
     lookup_data_file: {
-      path: "load_data_lookup.parquet",
+      path: "dgen/load_data_lookup.parquet",
     },
   },
 }
