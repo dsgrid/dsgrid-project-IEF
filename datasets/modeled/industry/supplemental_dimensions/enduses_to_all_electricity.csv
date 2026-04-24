@@ -1,0 +1,11 @@
+﻿from_id,to_id
+boiler,all_electricity
+process_heating,all_electricity
+process_cooling,all_electricity
+machine_drive,all_electricity
+process_electrochemical,all_electricity
+process_other,all_electricity
+hvac,all_electricity
+lighting,all_electricity
+non_process,all_electricity
+other,all_electricity
