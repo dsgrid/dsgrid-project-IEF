@@ -110,7 +110,10 @@
       path: "load_data.parquet",
     },
     lookup_data_file: {
-      path: "load_data_lookup.parquet",
+      path: "load_data_lookup_revised.parquet",
     },
+    missing_associations: [
+      "missing_associations/geography__subsector.parquet",
+    ],
   },
 }

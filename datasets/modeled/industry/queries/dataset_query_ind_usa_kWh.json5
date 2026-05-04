@@ -1,0 +1,48 @@
+{
+  name: "industry_summary_usa_kWh",
+  result: {
+    table_format: {
+      format_type: "pivoted",
+      pivoted_dimension_type: "subsector",
+    },
+    output_format: "csv",
+    sort_columns: ["scenario", "model_year"],
+  },
+  dataset_id: "ief_2025_industry",
+  to_dimension_references: [
+    {
+      type: "geography",
+      dimension_id: "09884c5e-776b-4a5f-94fa-393e4fc520f3", // industry supplemental US states dimension id
+      version: "1.0.0",
+    },
+    {
+      type: "metric",
+      dimension_id: "5406cf9d-9438-4ff8-a0e7-e12191ce2c59", // all electricity kWh dimension id
+      version: "1.0.0",
+    },
+    {
+      type: "subsector",
+      dimension_id: "770cbb52-e25e-4714-9cb0-78c249d020e9", // industry supplemental simple subsector dimension id
+      version: "1.0.0",
+    },
+    {
+      type: "model_year",
+      dimension_id: "c8298217-c290-4a69-b526-4341a83e7f27", // IEF project model years
+      version: "1.0.0",
+    },
+    {
+      type: "time",
+      dimension_id: "01935f41-ace5-4e30-8329-a414eb03356c", // industrial annual time
+      version: "1.0.0",
+    }
+  ],
+  mapping_plan: null,
+  time_based_data_adjustment: {
+    leap_day_adjustment: "none",
+    daylight_saving_adjustment: {
+      spring_forward_hour: "none",
+      fall_back_hour: "none",
+    },
+  },
+  wrap_time_allowed: false,
+}

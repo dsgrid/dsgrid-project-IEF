@@ -1,0 +1,55 @@
+{
+    dimensions: [
+        {
+            "class": "GeographyDimensionBaseModel",
+            type: "geography",
+            name: "US States",
+            description: "All US states including AK and HI",
+            records: [
+                { id: "usa", name: "United States"},
+            ]
+        },
+        {
+            "class": "EnergyEndUse",
+            type: "metric",
+            name: "all_electricity_kWh",
+            description: "All electricity end uses in kWh",
+            records: [
+                { id: "all_electricity", name: "all_electricity", fuel_id: "electricity", unit: "kWh"},
+            ]
+        },
+        {
+            "class": "EnergyEndUse",
+            type: "metric",
+            name: "all_electricity_TWh",
+            description: "All electricity end uses in TWh",
+            records: [
+                { id: "all_electricity", name: "all_electricity", fuel_id: "electricity", unit: "TWh"},
+            ]
+        },
+        {
+            "class": "Subsector",
+            type: "subsector",
+            name: "simple_industrial_subsectors",
+            description: "Simple industrial subsectors",
+            file: "simple_subsectors.csv",
+        },
+        {
+            type: "time",
+            "class": "AnnualTime",
+            time_type: "annual",
+            module: "dsgrid.dimension.standard",
+            description: "Annual time 2018-2050",
+            name: "annual",
+            ranges: [
+                {
+                    start: "2018",
+                    end: "2050",
+                },
+            ],
+            str_format: "%Y",
+            include_leap_day: true,
+            measurement_type: "total",
+        },
+    ]
+}

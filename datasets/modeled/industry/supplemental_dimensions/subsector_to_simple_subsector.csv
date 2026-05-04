@@ -1,0 +1,13 @@
+﻿from_id,to_id
+cement_concrete,manufacturing
+chemical,manufacturing
+construction,construction
+datacenter,datacenter
+food_bev,manufacturing
+iron_steel,manufacturing
+mining,mining
+other,manufacturing
+pesticides_fertilizer,manufacturing
+pet_refinery,manufacturing
+pulp_paper,manufacturing
+water_treatment,water_treatment

@@ -1,0 +1,26 @@
+{
+  "dataset_id": "ief_2025_industry",
+  "mappings": [
+    {
+      "name": "model_year",
+      "handle_data_skew": null,
+      "persist": false
+    },
+    {
+      "name": "end_use",
+      "handle_data_skew": null,
+      "persist": false
+    },
+    {
+      "name": "county",
+      "handle_data_skew": null,
+      "persist": true
+    },
+    {
+      "name": "scenario",
+      "handle_data_skew": null,
+      "persist": false
+    }
+  ],
+  "keep_intermediate_files": false
+}
