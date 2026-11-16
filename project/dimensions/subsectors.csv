@@ -1,7 +1,9 @@
 id,name
 unspecified,Unspecified
 ldv-car,LDV Car
+ldv-car-phev,LDV Car PHEV
 ldv-light-truck,LDV Light Truck
+ldv-light-truck-phev,LDV Light Truck PHEV
 truck-light,Light Truck
 truck-medium,Medium Truck
 truck-heavy,Heavy Truck
