@@ -3,7 +3,7 @@
   dataset_type: "modeled",
   data_source: "evi-grid-national-framework",
   sector_description: "electric load associated with light, medium, and heavy-duty road transportation",
-  description: "IEF Year 2 Task 2-1 results from the evi-grid-national-framework (Jan 2025) with profiles using 2018 as the weather year",
+  description: "IEF Year 2 Task 2-1 results from the evi-grid-national-framework with profiles using 2018 as the weather year",
   origin_creator: "Nick Reinicke",
   origin_organization: "NREL",
   origin_contributors: [
@@ -35,7 +35,7 @@
       name: "county",
       file: "dimensions/counties.csv",
       module: "dsgrid.dimension.standard",
-      description: "US counties, Census 2020 vintage, AK/HI included, no territories.",
+      description: "US counties, Census 2023 vintage, AK/HI included",
     },
     {
       type: "sector",
@@ -106,7 +106,8 @@
     table_format: "one_table",
     value_format: "stacked",
     data_file: {
-      path: "load_data.parquet",
+      path: "table.parquet",
     },
+    missing_associations: ["ief_2025_transport__missing_dimension_record_combinations.parquet"]
   },
 }

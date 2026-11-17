@@ -113,7 +113,10 @@
     value_format: "pivoted",
     pivoted_dimension_type: "metric",
     data_file: {
-      path: "load_data.parquet",
+      path: "buildings/load_data.parquet",
     },
+    missing_associations: [
+      "missing_associations"
+    ],
   },
 }

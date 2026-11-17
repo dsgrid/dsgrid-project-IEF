@@ -1,0 +1,118 @@
+{
+  dataset_id: "ief_2025_transport_stock",
+  dataset_type: "modeled",
+  data_source: "evi-grid-national-framework & TEMPO",
+  sector_description: "PEV stock with light, medium, and heavy-duty road transportation",
+  description: "IEF Year 2 Task 2-1 results from the evi-grid-national-framework and TEMPO",
+  origin_creator: "Nick Reinicke",
+  origin_organization: "NREL",
+  origin_contributors: [
+    "Arthur Yip",
+    "Brennan Borlaug",
+    "Jiayun Sun",
+  ],
+  origin_project: "IEF Year 2, Task 2-1",
+  data_source_date: "2025-01-30",
+  data_source_version: "1",
+  data_source_doi_url: "evi-grid-national-framework simulations",
+  data_classification: "low",
+  tags: [
+    "TEMPO",
+    "evi-grid-national-framework",
+    "EVI-Pro",
+    "EV",
+    "electric vehicle"
+  ],
+  trivial_dimensions: [
+    "weather_year",
+    "sector"
+  ],
+  use_project_geography_time_zone: true,
+  data_layout: {
+    table_format: "one_table",
+    value_format: "stacked",
+    data_file: {
+      path: "vehicle_stock_dsgrid.csv",
+    },
+    missing_associations: ["ief_2025_transport_stock__missing_dimension_record_combinations.parquet"]
+  },
+  dimensions: [
+    { 
+     "class": "County",
+      type: "geography",
+      name: "county",
+      file: "../transport/dimensions/counties.csv",
+      module: "dsgrid.dimension.standard",
+      description: "US counties, Census 2023 vintage, AK/HI included",
+    },
+    {
+      type: "sector",
+      "class": "Sector",
+      description: "tempo sector",
+      file: "../transport/dimensions/sectors.csv",
+      module: "dsgrid.dimension.standard",
+      name: "sector",
+      
+    },
+    {
+      type: "subsector",
+      "class": "Subsector",
+      description: "EV charging for specific EV market segments, vehicle classes, and powertrain technologies",
+      file: "../transport/dimensions/subsectors.csv",
+      module: "dsgrid.dimension.standard",
+      name: "subsector",
+      
+    },
+    {
+      type: "metric",
+      name: "vehicle_stock",
+      file: "dimensions/metrics.csv",
+      module: "dsgrid.dimension.standard",
+      "class": "Stock",
+      description: "Number of vehicles",
+    },
+    {
+      type: "scenario",
+      name: "ev_scenario",
+      file: "../transport/dimensions/scenarios.csv",
+      module: "dsgrid.dimension.standard",
+      "class": "Scenario",
+      description: "IEF transport scenarios",
+    },
+    {
+      type: "model_year",
+      name: "model_year",
+      file: "dimensions/years.csv",
+      module: "dsgrid.dimension.standard",
+      "class": "ModelYear",     
+      description: "model years, 2025 - 2050, every 5 years",
+    },
+    {
+      type: "weather_year",
+      class: "WeatherYear",
+      name: "weather_2018",
+      description: "Weather year, 2018 only",
+      file: "../../../project/dimensions/weather_years.csv",
+      module: "dsgrid.dimension.standard",
+    },
+    {
+      type: "time",
+      "class": "AnnualTime",
+      time_type: "annual",
+      module: "dsgrid.dimension.standard",
+      description: "Annual time 2025-2050",
+      name: "time_year",
+      ranges: [
+        {
+          start: "2025",
+          end: "2050",
+          // str_format: "%Y",
+          // frequency: 5, // int
+        },
+      ],
+      
+      include_leap_day: true,
+      measurement_type: "total",
+    },
+  ]
+}    

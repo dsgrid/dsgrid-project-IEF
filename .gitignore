@@ -132,4 +132,4 @@ dmypy.json
 .DS_Store
 
 # dsgrid
-__dsgrid_scratch__
+__dsgrid_scratch__/
