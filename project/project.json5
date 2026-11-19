@@ -1,7 +1,7 @@
 {
-  project_id: 'US_DOE_IEF_2025',
+  project_id: 'IEF_2025',
   description: '',
-  name: 'U.S. DOE IEF High Resolution Load Projections 2025',
+  name: 'IEF High Resolution Load Projections 2025',
   datasets: [
     {
       dataset_id: 'ief_2025_buildings',

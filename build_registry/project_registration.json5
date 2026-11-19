@@ -7,7 +7,7 @@
 {
   projects: [
     {
-      project_id: "US_DOE_IEF_2025",
+      project_id: "IEF_2025",
       config_file: "project/project.json5",
     },
   ],
@@ -45,37 +45,37 @@
   ],
   dataset_submissions: [
     {
-      project_id: "US_DOE_IEF_2025",
+      project_id: "IEF_2025",
       dataset_id: "ief_2025_buildings",
       dimension_mapping_file: "datasets/modeled/buildings/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false
     },
     {
-      project_id: "US_DOE_IEF_2025",
+      project_id: "IEF_2025",
       dataset_id: "ief_2025_industry",
       dimension_mapping_file: "datasets/modeled/industry/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false,
     },
     // {
-    //   project_id: "US_DOE_IEF_2025",
+    //   project_id: "IEF_2025",
     //   dataset_id: "ief_2025_transport",
     //   dimension_mapping_file: "datasets/modeled/transport/dimension_mappings.json5",
     //   replace_dimension_mapping_names_with_ids: false
     // },
     {
-      project_id: "US_DOE_IEF_2025",
+      project_id: "IEF_2025",
       dataset_id: "eia_861_annual_energy_use_state_sector",
       dimension_mapping_file: "datasets/historical/eia_861_annual_energy_use_state_sector/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false
     },
     {
-      project_id: "US_DOE_IEF_2025",
+      project_id: "IEF_2025",
       dataset_id: "ief_2025_buildings_state",
       dimension_mapping_file: "datasets/modeled/buildings_state/dimension_mappings.json5",
       replace_dimension_mapping_names_with_ids: false,
     },
     // {
-    //   project_id: "US_DOE_IEF_2025",
+    //   project_id: "IEF_2025",
     //   dataset_id: "ief_2025_dgen",
     //   dimension_mapping_file: "datasets/modeled/dgen/dimension_mappings.json5",
     //   replace_dimension_mapping_names_with_ids: false
