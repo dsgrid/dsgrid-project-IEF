@@ -169,17 +169,32 @@
             base_missing: {record_ids: ['2018','2023','2024'], dimension_name: "model_year"},
           },
         },
-        // Each subsector requires only its own end uses (end_uses_by_subsector selectors are named by subsector id).
+        // Each subsector requires only its own end uses
         multi_dimensional: [
-          {subsector: {base: {record_ids: ['ldv-car']}},              metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-car']}]}},
-          {subsector: {base: {record_ids: ['ldv-car-phev']}},         metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-car-phev']}]}},
-          {subsector: {base: {record_ids: ['ldv-light-truck']}},      metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-light-truck']}]}},
-          {subsector: {base: {record_ids: ['ldv-light-truck-phev']}}, metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-light-truck-phev']}]}},
-          {subsector: {base: {record_ids: ['truck-light']}},          metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-light']}]}},
-          {subsector: {base: {record_ids: ['truck-medium']}},         metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-medium']}]}},
-          {subsector: {base: {record_ids: ['truck-heavy']}},          metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-heavy']}]}},
-          {subsector: {base: {record_ids: ['transit-bus']}},          metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['transit-bus']}]}},
-          {subsector: {base: {record_ids: ['school-bus']}},           metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['school-bus']}]}},
+          {
+            subsector: {base: {record_ids: ['ldv-car', 'ldv-light-truck']}}, 
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-bev']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['ldv-car-phev', 'ldv-light-truck-phev']}},  
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-phev']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['truck-light']}},
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-light']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['truck-medium', 'truck-heavy']}},
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-medium-heavy']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['transit-bus']}},
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['transit-bus']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['school-bus']}},
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['school-bus']}]}
+          },
         ],
       },
     },
