@@ -108,6 +108,7 @@
     data_file: {
       path: "transport/table.parquet",
     },
-    missing_associations: ["ief_2025_transport__missing_dimension_record_combinations.parquet"]
+    expected_associations: ["expected_associations"],
+    missing_associations: ["missing_associations"],
   },
 }

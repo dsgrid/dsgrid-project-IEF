@@ -34,7 +34,7 @@
     data_file: {
       path: "vehicle_stock_dsgrid.csv",
     },
-    missing_associations: ["ief_2025_transport_stock__missing_dimension_record_combinations.parquet"]
+    missing_associations: []
   },
   dimensions: [
     { 
