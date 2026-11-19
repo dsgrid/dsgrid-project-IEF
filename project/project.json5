@@ -29,6 +29,7 @@
               ],
             },
             metric: {
+              base: {dimension_name: "end_use"},
               subset: [
                 {
                   name: 'end_uses_by_sector',
@@ -46,6 +47,7 @@
               ],
             },
             metric: {
+              base: {dimension_name: "end_use"},
               subset: [
                 {
                   name: 'end_uses_by_sector',
@@ -80,6 +82,7 @@
               ],
             },
             metric: {
+              base: {dimension_name: "end_use"},
               subset: [
                 {
                   name: 'end_uses_by_sector',
@@ -97,6 +100,7 @@
               ],
             },
             metric: {
+              base: {dimension_name: "end_use"},
               subset: [
                 {
                   name: 'end_uses_by_sector',
@@ -139,6 +143,7 @@
             ],
           },
           metric: {
+            base: {dimension_name: "end_use"},
             subset: [
               {
                 name: 'end_uses_by_sector',
