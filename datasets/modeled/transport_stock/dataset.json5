@@ -32,9 +32,11 @@
     table_format: "one_table",
     value_format: "stacked",
     data_file: {
-      path: "vehicle_stock_dsgrid.csv",
+      path: "transport_stock/vehicle_stock_dsgrid.parquet",
     },
-    missing_associations: []
+    missing_associations: [
+      "missing_associations"
+    ]
   },
   dimensions: [
     { 
