@@ -168,29 +168,20 @@
           model_year: {
             base_missing: {record_ids: ['2018','2023','2024'], dimension_name: "model_year"},
           },
-          subsector: {
-            subset: [
-              {
-                name: 'subsectors_by_sector',
-                selectors: [
-                  'transportation_subsectors',
-                ],
-              },
-            ],
-          },
-          metric: {
-            base: {dimension_name: "end_use"},
-            subset: [
-              {
-                name: 'end_uses_by_sector',
-                selectors: [
-                  'transportation_end_uses',
-                ],
-              },
-            ],
-          },
-         },
         },
+        // Each subsector requires only its own end uses (end_uses_by_subsector selectors are named by subsector id).
+        multi_dimensional: [
+          {subsector: {base: {record_ids: ['ldv-car']}},              metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-car']}]}},
+          {subsector: {base: {record_ids: ['ldv-car-phev']}},         metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-car-phev']}]}},
+          {subsector: {base: {record_ids: ['ldv-light-truck']}},      metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-light-truck']}]}},
+          {subsector: {base: {record_ids: ['ldv-light-truck-phev']}}, metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-light-truck-phev']}]}},
+          {subsector: {base: {record_ids: ['truck-light']}},          metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-light']}]}},
+          {subsector: {base: {record_ids: ['truck-medium']}},         metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-medium']}]}},
+          {subsector: {base: {record_ids: ['truck-heavy']}},          metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-heavy']}]}},
+          {subsector: {base: {record_ids: ['transit-bus']}},          metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['transit-bus']}]}},
+          {subsector: {base: {record_ids: ['school-bus']}},           metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['school-bus']}]}},
+        ],
+      },
     },
     {
       dataset_id: 'ief_2025_transport_stock',
@@ -440,6 +431,38 @@
             name: 'industrial_subsectors',
             description: 'Industrial Subsectors',
           },
+        ],
+      },
+      {
+        name: 'end_uses_by_subsector',
+        description: 'Selects the end uses that apply to each subsector. Selector names match project subsector ids.',
+        type: 'metric',
+        file: 'dimensions/subset/end_uses_by_subsector.csv',
+        // Selectors overlap (an end use can apply to several subsectors), so no supplemental dimension.
+        create_supplemental_dimension: false,
+        selectors: [
+          {name: 'unspecified',           description: 'Unspecified End Uses'},
+          {name: 'ldv-car',               description: 'LDV Car End Uses'},
+          {name: 'ldv-car-phev',          description: 'LDV Car PHEV End Uses'},
+          {name: 'ldv-light-truck',       description: 'LDV Light Truck End Uses'},
+          {name: 'ldv-light-truck-phev',  description: 'LDV Light Truck PHEV End Uses'},
+          {name: 'truck-light',           description: 'Light Truck End Uses'},
+          {name: 'truck-medium',          description: 'Medium Truck End Uses'},
+          {name: 'truck-heavy',           description: 'Heavy Truck End Uses'},
+          {name: 'transit-bus',           description: 'Transit Bus End Uses'},
+          {name: 'school-bus',            description: 'School Bus End Uses'},
+          {name: 'cement_concrete',       description: 'Cement and Concrete End Uses'},
+          {name: 'pesticides_fertilizer', description: 'Pesticides and Fertilizer End Uses'},
+          {name: 'iron_steel',            description: 'Iron and Steel End Uses'},
+          {name: 'food_bev',              description: 'Food and Beverage End Uses'},
+          {name: 'chemical',              description: 'Chemicals End Uses'},
+          {name: 'pet_refinery',          description: 'Petroleum Refineries End Uses'},
+          {name: 'pulp_paper',            description: 'Pulp and Paper End Uses'},
+          {name: 'other',                 description: 'Other Industry End Uses'},
+          {name: 'datacenter',            description: 'Data Centers End Uses'},
+          {name: 'mining',                description: 'Mining End Uses'},
+          {name: 'water_treatment',       description: 'Water Supply and Treatment End Uses'},
+          {name: 'construction',          description: 'Construction End Uses'},
         ],
       },
       {
