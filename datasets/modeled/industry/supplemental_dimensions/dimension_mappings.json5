@@ -1,0 +1,79 @@
+{
+    mappings: [
+        {
+            description: "County to US States",
+            file: "county_to_usa.csv",
+            mapping_type: "many_to_one_aggregation",
+            from_dimension: {
+                type: "geography",
+                dimension_id: "0d2f5263-551c-4d5e-aa68-d1acf1aa7ff4", // industry counties dimension id
+                version: "1.0.0",
+            },
+            to_dimension: {
+                type: "geography",
+                dimension_id: "09884c5e-776b-4a5f-94fa-393e4fc520f3", // industry supplemental US states dimension id
+                version: "1.0.0",
+            },
+        },
+        {
+            description: "County to CONUS",
+            file: "county_to_conus.csv",
+            mapping_type: "many_to_one_aggregation",
+            from_dimension: {
+                type: "geography",
+                dimension_id: "0d2f5263-551c-4d5e-aa68-d1acf1aa7ff4", // industry counties dimension id
+                version: "1.0.0",
+            },
+            to_dimension: {
+                type: "geography",
+                dimension_id: "dddd05ed-792e-4ced-9523-79bcbf923bf0", // IEF project CONUS dimension id
+                version: "1.0.0",
+            },
+        },
+        {
+            description: "Simplified subsectors",
+            file: "subsector_to_simple_subsector.csv",
+            mapping_type: "many_to_one_aggregation",
+            from_dimension: {
+                type: "subsector",
+                dimension_id: "1db395fe-9a7a-48d0-883b-ad9cf136af51", // industry subsector dimension id
+                version: "1.0.0",
+            },
+            to_dimension: {
+                type: "subsector",
+                dimension_id: "770cbb52-e25e-4714-9cb0-78c249d020e9", // industry supplemental simple subsector dimension id
+                version: "1.0.0",
+            },
+        },
+        {
+            description: "Collapse end uses kWh",
+            file: "enduses_to_all_electricity.csv",
+            mapping_type: "many_to_one_aggregation",
+            from_dimension: {
+                type: "metric",
+                dimension_id: "43fa3142-3e59-4d52-9b51-04b85c9fe00a", // industry end use dimension id
+                version: "1.0.0",
+            },
+            to_dimension: {
+                type: "metric",
+                dimension_id: "5406cf9d-9438-4ff8-a0e7-e12191ce2c59", // all electricity kWh dimension id
+                version: "1.0.0",
+            },
+        },
+        {
+            description: "Collapse end uses TWh",
+            file: "enduses_to_all_electricity.csv",
+            mapping_type: "many_to_one_aggregation",
+            from_dimension: {
+                type: "metric",
+                dimension_id: "43fa3142-3e59-4d52-9b51-04b85c9fe00a", // industry end use dimension id
+                version: "1.0.0",
+            },
+            to_dimension: {
+                type: "metric",
+                dimension_id: "5406cf9d-9438-4ff8-a0e7-e12191ce2c59", // all electricity TWh dimension id
+                version: "1.0.0",
+            },
+        }        
+    ]
+}

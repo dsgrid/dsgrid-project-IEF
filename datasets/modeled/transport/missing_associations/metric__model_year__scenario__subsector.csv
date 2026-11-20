@@ -1,0 +1,4 @@
+metric,model_year,scenario,subsector
+electricity_ev_ldv_depot_dcfc,2050,ief_stated_policies,ldv-car
+electricity_ev_mhdv_depot_dcfc,2030,ief_stated_policies,truck-light
+electricity_ev_mhdv_depot_l2,2030,ief_stated_policies,truck-medium

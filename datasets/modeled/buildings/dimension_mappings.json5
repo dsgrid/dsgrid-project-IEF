@@ -9,6 +9,7 @@
     {
       description: "Buildings enduses to project enduses",
       dimension_type: "metric",
+      project_base_dimension_name: "end_use",
       file: "dimension_mappings/enduse_to_enduse.csv",
       mapping_type: "one_to_one",
     },

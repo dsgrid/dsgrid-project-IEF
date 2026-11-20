@@ -112,7 +112,7 @@
     value_format: "pivoted",
     pivoted_dimension_type: "metric",
     data_file: {
-      path: "load_data.parquet",
+      path: "dgen/load_data.parquet",
     },
     lookup_data_file: {
       path: "dgen/load_data_lookup.parquet",

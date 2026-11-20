@@ -107,10 +107,14 @@
     value_format: "pivoted",
     pivoted_dimension_type: "metric",
     data_file: {
-      path: "load_data.parquet",
+      path: "industry/load_data.parquet",
     },
+    // same as IEF_Task2_rawdata/industry8/load_data_lookup_revised.parquet
     lookup_data_file: {
-      path: "load_data_lookup.parquet",
+      path: "industry/load_data_lookup.parquet",
     },
+    missing_associations: [
+      "missing_associations/geography__subsector.parquet",
+    ],
   },
 }

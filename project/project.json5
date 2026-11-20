@@ -1,7 +1,7 @@
 {
-  project_id: 'US_DOE_IEF_2025',
+  project_id: 'IEF_2025',
   description: '',
-  name: 'U.S. DOE IEF High Resolution Load Projections 2025',
+  name: 'IEF High Resolution Load Projections 2025',
   datasets: [
     {
       dataset_id: 'ief_2025_buildings',
@@ -29,6 +29,7 @@
               ],
             },
             metric: {
+              base: {dimension_name: "end_use"},
               subset: [
                 {
                   name: 'end_uses_by_sector',
@@ -46,6 +47,7 @@
               ],
             },
             metric: {
+              base: {dimension_name: "end_use"},
               subset: [
                 {
                   name: 'end_uses_by_sector',
@@ -80,6 +82,7 @@
               ],
             },
             metric: {
+              base: {dimension_name: "end_use"},
               subset: [
                 {
                   name: 'end_uses_by_sector',
@@ -97,6 +100,7 @@
               ],
             },
             metric: {
+              base: {dimension_name: "end_use"},
               subset: [
                 {
                   name: 'end_uses_by_sector',
@@ -139,6 +143,7 @@
             ],
           },
           metric: {
+            base: {dimension_name: "end_use"},
             subset: [
               {
                 name: 'end_uses_by_sector',
@@ -163,29 +168,35 @@
           model_year: {
             base_missing: {record_ids: ['2018','2023','2024'], dimension_name: "model_year"},
           },
-          subsector: {
-            subset: [
-              {
-                name: 'subsectors_by_sector',
-                selectors: [
-                  'transportation_subsectors',
-                ],
-              },
-            ],
-          },
-          metric: {
-            base: {dimension_name: "end_use"},
-            subset: [
-              {
-                name: 'end_uses_by_sector',
-                selectors: [
-                  'transportation_end_uses',
-                ],
-              },
-            ],
-          },
-         },
         },
+        // Each subsector requires only its own end uses
+        multi_dimensional: [
+          {
+            subsector: {base: {record_ids: ['ldv-car', 'ldv-light-truck']}}, 
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-bev']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['ldv-car-phev', 'ldv-light-truck-phev']}},  
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['ldv-phev']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['truck-light']}},
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-light']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['truck-medium', 'truck-heavy']}},
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['truck-medium-heavy']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['transit-bus']}},
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['transit-bus']}]}
+          },
+          {
+            subsector: {base: {record_ids: ['school-bus']}},
+            metric: {subset: [{name: 'end_uses_by_subsector', selectors: ['school-bus']}]}
+          },
+        ],
+      },
     },
     {
       dataset_id: 'ief_2025_transport_stock',
@@ -435,6 +446,25 @@
             name: 'industrial_subsectors',
             description: 'Industrial Subsectors',
           },
+        ],
+      },
+      {
+        name: 'end_uses_by_subsector',
+        description: 'Selects the end uses that apply to each subsector. Selector names match project subsector ids.',
+        type: 'metric',
+        base_dimension_name: "end_use",
+        file: 'dimensions/subset/end_uses_by_subsector.csv',
+        // Selectors overlap (an end use can apply to several subsectors), so no supplemental dimension.
+        create_supplemental_dimension: false,
+        selectors: [
+          {name: 'unspecified',           description: 'Unspecified End Uses'},
+          {name: 'ldv-bev',               description: 'LDV Car and Light Truck End Uses'},
+          {name: 'ldv-phev',              description: 'LDV Car PHEV and Light Truck PHEV End Uses'},
+          {name: 'truck-light',           description: 'Light Truck End Uses'},
+          {name: 'truck-medium-heavy',    description: 'Medium and Heavy Truck End Uses'},
+          {name: 'transit-bus',           description: 'Transit Bus End Uses'},
+          {name: 'school-bus',            description: 'School Bus End Uses'},
+          {name: 'industry',              description: 'End Uses for All Industrial Subsectors'},
         ],
       },
       {
